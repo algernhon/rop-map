@@ -181,8 +181,16 @@ input[type="checkbox"][id^="checkbox"] {
     right: 0;
     z-index: 1000;
     font-size: .6rem;
+}
+
+.footer__copyright {
     background-color: rgba(37, 37, 37, 0.8);
     color: white;
     padding: .2rem .5rem;
     border-top-left-radius: 5px;
+}
+
+.footer__github {
+    padding: .5rem;
+    text-align: right;
 }
