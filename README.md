@@ -14,6 +14,15 @@ This app is designed with **HTML/CSS/Javascript**. Simple isn't it?
 
 This project uses [LeafLet library](https://leafletjs.com) for the interactive maps.
 
+## Structure
+
+The structure is straightforward, but it may be subject to change during development.
+
+- 📁./ccs/ - All CSS files of the project (BEM naming convention)
+- 📁./data/ - All markers/paths data in JSON format *(could be replaced by a databse later)*
+- 📁./img/ - Images: designs, markers, cards, portraits
+- 📁./js/ - JS part of the project
+
 ## Roadmap
 
 The **0.1 version** - *Still clunky, but public ready*
