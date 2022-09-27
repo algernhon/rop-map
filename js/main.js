@@ -1,4 +1,9 @@
+// List of current layers
 const LIST_PATHS = {};
+
+/*
+ * Leaflet map setup
+*/
 let map = L.map('map', {
     crs: L.CRS.Simple,
     attributionControl: false
@@ -6,7 +11,6 @@ let map = L.map('map', {
 
 let bounds = [[0,0], [1000,1366]];
 let image = L.imageOverlay('./img/map.webp', bounds).addTo(map);
-
 map.fitBounds(bounds);
 
 /* 
@@ -30,6 +34,11 @@ DATA_MARKERS.markers.forEach(marker => {
         
 });
 
+/*
+ * Function that draw or remove a path from the map
+ *
+ * @param element the input checked/unchecked by the user
+*/
 function togglePathCheckbox(element) {
     const CHARACTER = DATA_PATHS.paths.find(path => path.character === element.name);
     const COLOR = DATA_PATHS.characters.find(color => color.name === element.name).color;
