@@ -1,9 +1,15 @@
 :root {
     --color-font: #333;
-    --color-bg-tooltip: #dbd3ba;
     --color-white: #eceff4;
     --color-white-grey: #d8dee9;
+    --color-darkerblue: #242933;
+    --color-darkblue: #2e3440;
+    --color-blue: #434c5e;
+    --color-lightblue: #5e81ac;
+    --color-red: #bf616a;
+
     --border-radius: 10px;
+    --box-shadow: rgba(15, 17, 21, 0.2) 0px 3px 6px 0px;
 }
 
 * {
@@ -21,11 +27,6 @@ html, body {
     overflow-x: hidden;
 }
 
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-}
-
 h2 {
     font-size: 1.6rem;
     text-align: center;
@@ -38,13 +39,13 @@ input[type="checkbox"][id^="checkbox"] {
 }
 
 #map {
-    background-color: #242933;
+    background-color: var(--color-darkerblue);
     height: 100vh;
 }
 
 .menu {
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
-    box-shadow: rgba(15, 17, 21, 0.25) 0px 4px 6px, rgba(15, 17, 21, 0.1) 0px 5px 7px;
+    box-shadow: var(--box-shadow);
     color: var(--color-white);
     background-color: #2e3440;
     position: fixed;
@@ -58,7 +59,7 @@ input[type="checkbox"][id^="checkbox"] {
 }
 
 .menu__header {
-    box-shadow: rgba(15, 17, 21, 0.2) 0px 3px 6px 0px;
+    box-shadow: var(--box-shadow);
     padding: .5rem 0;
     text-align: center;
     z-index: 10;
@@ -73,7 +74,7 @@ input[type="checkbox"][id^="checkbox"] {
 }
 
 .menu__paths {
-    background-color: #434c5e ;
+    background-color: var(--color-blue);
     padding: 1rem 0;
     transition: transform 1s;
 }
@@ -120,7 +121,7 @@ input[type="checkbox"][id^="checkbox"] {
     content: "✓";
     position: absolute;
     right: 20px;
-    color: black;
+    color: var(--color-darkerblue);
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -140,7 +141,7 @@ input[type="checkbox"][id^="checkbox"] {
 }
 
 .footer__copyright {
-    background-color: rgba(37, 37, 37, 0.8);
+    background-color: var(--color-darkblue);
     color: var(--color-white);
     padding: .2rem .5rem;
     border-top-left-radius: 5px;
@@ -161,11 +162,37 @@ input[type="checkbox"][id^="checkbox"] {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+	background: var(--color-darkblue);
+	color: var(--color-white);
+	box-shadow: var(--box-shadow);
+}
+
 .tooltip-content {
     margin: 1rem;
 }
 .tooltip-moreinfo {
     margin: 1rem 0;
+}
+
+.tooltip-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.tooltip-tag {
+    display: inline;
+    background-color: var(--color-lightblue);
+    padding: .2rem .8rem;
+    font-size: .7rem;
+    border-radius: var(--border-radius);
+    margin: 0 .4rem;
+}
+
+.tooltip-tag--unconfirmed {
+    background-color: var(--color-red);
 }
 
 .tooltip-moreinfo a::before {
@@ -186,4 +213,7 @@ input[type="checkbox"][id^="checkbox"] {
 
 .tooltip-seenin {
     margin-top: 1rem;
+    padding-top: 1rem;
+    font-size: .7rem;
+    border-top: 1px dashed var(--color-blue);
 }

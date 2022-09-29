@@ -520,12 +520,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	    -ms-transform: rotate(45deg);
 	        transform: rotate(45deg);
 	}
-.leaflet-popup-content-wrapper,
-.leaflet-popup-tip {
-	background: #dbd3ba;
-	color: var(--color-font);
-	box-shadow: 0 3px 10px rgba(0,0,0,0.4);
-	}
 .leaflet-container a.leaflet-popup-close-button {
 	position: absolute;
 	top: 0;
