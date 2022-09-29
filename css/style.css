@@ -43,19 +43,76 @@ input[type="checkbox"][id^="checkbox"] {
     height: 100vh;
 }
 
-.menu {
-    border-radius: 0 var(--border-radius) var(--border-radius) 0;
-    box-shadow: var(--box-shadow);
-    color: var(--color-white);
-    background-color: #2e3440;
+.main {
+    display: flex;
+    flex-direction: row;
     position: fixed;
     top: 3vh;
     left: 0;
+    z-index: 10000;
+}
+
+.main_button {
+    border: none;
+    background-color: var(--color-blue);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0; 
+    color: var(--color-white);
+    height: 45px;
+    width: 25px;
+    padding-right: 5px;
+}
+
+.main_button::after {
+    content: "<";
+}
+
+.main_button--hidden {
+    left: -280px;
+}
+
+.main_button--hidden::after {
+    content: ">";
+}
+
+.menu {
+    border-radius: 0 0 var(--border-radius) 0;
+    box-shadow: var(--box-shadow);
+    color: var(--color-white);
+    background-color: #2e3440;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    width: 280px;
-    z-index: 10000;
+    width: 200px;
+    left: 0;
+    transition: left 1s;
+}
+
+@media screen and (min-width: 800px) {
+    .menu {
+        width: 280px;
+    }
+}
+
+.menu--show {
+    left: 0;
+    transition: left 1s;
+}
+
+@media screen and (min-width: 800px) {
+    .menu--show {
+        left: 0;
+    }
+}
+
+.menu--hidden {
+    left: -200px;
+    transition: left 1s;
+}
+
+@media screen and (min-width: 800px) {
+    .menu--hidden {
+        left: -280px;
+    }
 }
 
 .menu__header {
@@ -86,8 +143,14 @@ input[type="checkbox"][id^="checkbox"] {
 
 .pathsgrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     row-gap: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+    .pathsgrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .pathsgrid__image {
@@ -145,6 +208,7 @@ input[type="checkbox"][id^="checkbox"] {
     color: var(--color-white);
     padding: .2rem .5rem;
     border-top-left-radius: 5px;
+    text-align: center;
 }
 
 .footer__github {
@@ -157,10 +221,16 @@ input[type="checkbox"][id^="checkbox"] {
     display: flex;
     align-items: flex-end;
     flex-direction: row-reverse;
-    width: 400px;
+    width: 300px;
     height: 166px;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 800px) {
+    .tooltip-image-wrapper {
+        width: 400px;
+    }
 }
 
 .leaflet-popup-content-wrapper,

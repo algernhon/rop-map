@@ -56,3 +56,19 @@ function togglePathCheckbox(element) {
         LIST_PATHS[element.name].removeFrom(map);
     }
 }
+
+function hideshow() {
+    const button = document.getElementById("main_button");
+    const menu = document.getElementById("main");
+
+    const isHidden = button.classList.contains('main_button--hidden');
+
+    if (!isHidden) {
+        button.classList.add("main_button--hidden");
+        menu.classList.add("menu--hidden");
+    }
+    else {
+        button.classList.remove("main_button--hidden");
+        menu.classList.remove("menu--hidden");
+    }
+}

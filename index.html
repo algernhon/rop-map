@@ -25,50 +25,55 @@
 </head>
 <body>
     <main role="main" aria-label="Main menu">
-        <div class="menu">
-            <header class="menu__header">
-                <h1 class="menu__header-title">ROP Map</h1>
-                <p class="menu__header-description">A Rings Of Power interactive map</p>
-            </header>
-            <div class="menu__paths">
-                <h2>Paths</h2>
-                <div class="pathsgrid">
-                    <div class="pathsgrid__card">
-                        <input type="checkbox" name="Arondir" id="checkboxArondir" onchange="togglePathCheckbox(this)"/>
-                        <label class="pathsgrid__label" for="checkboxArondir" tabindex="0">
-                            <img src="img/portraits/arondir.webp" alt="Arondir's Path" />
-                            <p>Arondir</p>
-                        </label>
-                    </div>
-                    <div class="pathsgrid__card">
-                        <input type="checkbox" name="Elendil" id="checkboxElendil" onchange="togglePathCheckbox(this)" />
-                        <label class="pathsgrid__label" for="checkboxElendil" tabindex="0">
-                            <img src="img/portraits/elendil.webp" alt="Elendil's Path" />
-                            <p>Elendil</p>
-                        </label>
-                    </div>
-                    <div class="pathsgrid__card">
-                        <input type="checkbox" name="Elrond" id="checkboxElrond" onchange="togglePathCheckbox(this)" />
-                        <label class="pathsgrid__label" for="checkboxElrond" tabindex="0">
-                            <img src="img/portraits/elrond.webp" alt="Elrond's Path" />
-                            <p>Elrond</p>
-                        </label>
-                    </div>
-                    <div class="pathsgrid__card">
-                        <input type="checkbox" name="Galabriel" id="checkboxGalabriel"  onchange="togglePathCheckbox(this)"/>
-                        <label class="pathsgrid__label" for="checkboxGalabriel" tabindex="0">
-                            <img src="img/portraits/galabriel.webp" alt="Galabriel's Path" />
-                            <p>Galabriel</p>
-                        </label>
-                    </div>
-                    <div class="pathsgrid__card">
-                        <input type="checkbox" name="Nori" id="checkboxNori" onchange="togglePathCheckbox(this)" />
-                        <label class="pathsgrid__label" for="checkboxNori" tabindex="0">
-                            <img src="img/portraits/harfoots.webp" alt="Nori's Path" />
-                            <p>Nori</p>
-                        </label>
+        <div class="main menu--show" id="main">
+            <div class="menu">
+                <header class="menu__header">
+                    <h1 class="menu__header-title">ROP Map</h1>
+                    <p class="menu__header-description">A Rings Of Power interactive map</p>
+                </header>
+                <div class="menu__paths">
+                    <h2>Paths</h2>
+                    <div class="pathsgrid">
+                        <div class="pathsgrid__card">
+                            <input type="checkbox" name="Arondir" id="checkboxArondir" onchange="togglePathCheckbox(this)"/>
+                            <label class="pathsgrid__label" for="checkboxArondir" tabindex="0">
+                                <img src="img/portraits/arondir.webp" alt="Arondir's Path" />
+                                <p>Arondir</p>
+                            </label>
+                        </div>
+                        <div class="pathsgrid__card">
+                            <input type="checkbox" name="Elendil" id="checkboxElendil" onchange="togglePathCheckbox(this)" />
+                            <label class="pathsgrid__label" for="checkboxElendil" tabindex="0">
+                                <img src="img/portraits/elendil.webp" alt="Elendil's Path" />
+                                <p>Elendil</p>
+                            </label>
+                        </div>
+                        <div class="pathsgrid__card">
+                            <input type="checkbox" name="Elrond" id="checkboxElrond" onchange="togglePathCheckbox(this)" />
+                            <label class="pathsgrid__label" for="checkboxElrond" tabindex="0">
+                                <img src="img/portraits/elrond.webp" alt="Elrond's Path" />
+                                <p>Elrond</p>
+                            </label>
+                        </div>
+                        <div class="pathsgrid__card">
+                            <input type="checkbox" name="Galabriel" id="checkboxGalabriel"  onchange="togglePathCheckbox(this)"/>
+                            <label class="pathsgrid__label" for="checkboxGalabriel" tabindex="0">
+                                <img src="img/portraits/galabriel.webp" alt="Galabriel's Path" />
+                                <p>Galabriel</p>
+                            </label>
+                        </div>
+                        <div class="pathsgrid__card">
+                            <input type="checkbox" name="Nori" id="checkboxNori" onchange="togglePathCheckbox(this)" />
+                            <label class="pathsgrid__label" for="checkboxNori" tabindex="0">
+                                <img src="img/portraits/harfoots.webp" alt="Nori's Path" />
+                                <p>Nori</p>
+                            </label>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div>
+                <button id="main_button" class="main_button" type="button" onclick="hideshow()"></button>
             </div>
         </div>
         <div id="map"></div>
