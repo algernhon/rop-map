@@ -189,7 +189,7 @@ const DATA_MARKERS = {
         },
         {
             "title": "Galadriel leaves the boat heading to Valinor",
-            "coordinates": [591, 56],
+            "coordinates": [154, 15],
             "type": "event",
             "image": "event-boat-galabriel.webp",
             "episodes": ["S01E01"],
@@ -199,7 +199,7 @@ const DATA_MARKERS = {
         },
         {
             "title": "Galadriel is attacked by a sea worm",
-            "coordinates": [561.5, 182.5],
+            "coordinates": [127, 46.5],
             "type": "event",
             "image": "event-sea-worm.webp",
             "episodes": ["S01E01"],
@@ -209,7 +209,7 @@ const DATA_MARKERS = {
         },
         {
             "title": "Galadriel and Halbrand saved by Elendil",
-            "coordinates": [530, 314.7],
+            "coordinates": [83, 63],
             "type": "event",
             "image": "event-sea-save.webp",
             "episodes": ["S01E02", "S01E03"],
