@@ -44,7 +44,7 @@ const DATA_MARKERS = {
             "image": "grey-marshes.webp",
             "episodes": ["S01E05"],
             "decription": "A large area of swampland, part of one of the many Harfoots migration stage. This place will be renamed Dead Marshes at the beginning of the third age, right after the War of the Alliance.",
-            "readMoreUrl": "https://lotr.fandom.com/wiki/Dead_Marshes",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Dead_Marshes",
             "isConfirmed": true
         },
         {
@@ -144,7 +144,7 @@ const DATA_MARKERS = {
             "image": "mithlond.webp",
             "episodes": ["S01E01", "S01E02", "S01E03", "S01E04", "S01E05"],
             "decription": "Mithlond, known also as Grey Havens, is the capital of the high elves, ruled by Gil-galad.",
-            "readMoreUrl": "https://lotr.fandom.com/wiki/Grey_Havens",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Grey_Havens",
             "isConfirmed": true
         },
         {
@@ -154,7 +154,7 @@ const DATA_MARKERS = {
             "image": "ost-in-edhil.webp",
             "episodes": ["S01E02", "S01E03", "S01E04"],
             "decription": "Ost-in-Edhil is the capital city of Eregion, ruled by Celebrimbor.",
-            "readMoreUrl": "https://lotr.fandom.com/fr/wiki/Ost-in-Edhil",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Ost-in-Edhil",
             "isConfirmed": true
         },
         {
@@ -164,7 +164,7 @@ const DATA_MARKERS = {
             "image": "khazad-dum.webp",
             "episodes": ["S01E02", "S01E03", "S01E04"],
             "decription": "Khazad-dûm, commonly known as Moria, is the underground kingdom of the Dwarves of Durin's Folk, and the most famed of all Dwarven realms.",
-            "readMoreUrl": "https://lotr.fandom.com/wiki/Khazad-d%C3%BBm",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Moria",
             "isConfirmed": true
         },
         {
@@ -224,7 +224,7 @@ const DATA_MARKERS = {
             "image": "armenelos.webp",
             "episodes": ["S01E03", "S01E04", "S01E05"],
             "decription": "Armenelos, also known as Armenelos the Golden and City of the Kings, is the capital and eventual largest city of Númenor.",
-            "readMoreUrl": "https://lotr.fandom.com/wiki/Armenelos",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Armenelos",
             "isConfirmed": true
         },
         {
