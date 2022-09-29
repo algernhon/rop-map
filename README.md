@@ -1,6 +1,7 @@
 # 🗺 Rings Of Power interactive map
 
 🔗 Link: [rop-map.com](https://rop-map.com/)
+🔗 Contact: contact [at] rop-map.com
 
 RoP Map is an interactive map of the Rings Of Power TV shows. **This a fan-made application**.
 
