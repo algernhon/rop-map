@@ -65,7 +65,7 @@ const DATA_MARKERS = {
             "episodes": ["S01E05"],
             "decription": "Green and beautiful area characterized by a large waterfall.",
             "readMoreUrl": "",
-            "isConfirmed": false
+            "isConfirmed": true
         },
         {
             "title": "The Braids",
@@ -75,7 +75,7 @@ const DATA_MARKERS = {
             "episodes": ["S01E05"],
             "decription": "Unknown location.",
             "readMoreUrl": "",
-            "isConfirmed": false
+            "isConfirmed": true
         },
         {
             "title": "Unknown forest",
@@ -93,7 +93,7 @@ const DATA_MARKERS = {
             "type": "point of interest",
             "image": "harfoots-start.webp",
             "episodes": ["S01E01", "S01E02", "S01E03"],
-            "decription": "Quiet area with hills and forests. This is the starting area of Harfoots at the beginning of the TV show. This place belong to the region of Rhovanion.",
+            "decription": "Quiet area with hills and forests. This is the starting area of Harfoots at the beginning of the TV show. This place belongs to the region of Rhovanion.",
             "readMoreUrl": "",
             "isConfirmed": true
         },
@@ -236,6 +236,16 @@ const DATA_MARKERS = {
             "decription": "TODO",
             "readMoreUrl": "",
             "isConfirmed": false
+        },
+        {
+            "title": "Crater of fire",
+            "coordinates": [683, 939.8],
+            "type": "event",
+            "image": "event-man-falling-from-sky.webp",
+            "episodes": ["S01E01", "S01E02", "S01E05"],
+            "decription": "Location of the Stranger crash.",
+            "readMoreUrl": "",
+            "isConfirmed": true
         }
     ]
 }
