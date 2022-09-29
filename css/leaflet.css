@@ -531,7 +531,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	font: 16px/24px Tahoma, Verdana, sans-serif;
 	color: #757575;
 	text-decoration: none;
-	background: var(--color-bg-tooltip);
+	background: var(--color-white);
 	border-top-right-radius: 50%;
 	border-bottom-left-radius: 20%;
 	}
