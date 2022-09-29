@@ -119,7 +119,7 @@ const DATA_MARKERS = {
         },
         {
             "title": "Hordern",
-            "coordinates": [536.4, 951.9],
+            "coordinates": [538.4, 952.6],
             "type": "village",
             "image": "hordern.webp",
             "episodes": ["S01E01"],
@@ -128,14 +128,14 @@ const DATA_MARKERS = {
             "isConfirmed": true
         },
         {
-            "title": "Orc's camp",
-            "coordinates": [540, 957],
+            "title": "Prison camp",
+            "coordinates": [481.2, 980.2],
             "type": "point of interest",
             "image": "orccamp.webp",
             "episodes": ["S01E03", "S01E04"],
             "decription": "Camp of Orcs where Arondir was prisonnier after his investigation at Hordern.",
             "readMoreUrl": "",
-            "isConfirmed": false
+            "isConfirmed": true
         },
         {
             "title": "Mithlond",

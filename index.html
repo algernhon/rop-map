@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
     <script defer type="text/javascript" src="data/paths.js"></script>
     <script defer type="text/javascript" src="data/markers.js"></script>
     <script defer src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
@@ -24,12 +24,12 @@
     <script defer src="js/main.js"></script>
 </head>
 <body>
-    <header class="header">
-        <h1 class="header__title">ROP Map</h1>
-        <p>A Lord Of The Rings: Rings Of Power interactive map</p>
-    </header>
-    <main>
-        <div class="menu__side">
+    <main role="main" aria-label="Main menu">
+        <div class="menu">
+            <header class="menu__header">
+                <h1 class="menu__header-title">ROP Map</h1>
+                <p class="menu__header-description">A Rings Of Power interactive map</p>
+            </header>
             <div class="menu__paths">
                 <h2>Paths</h2>
                 <div class="pathsgrid">

@@ -6,8 +6,15 @@ const LIST_PATHS = {};
 */
 let map = L.map('map', {
     crs: L.CRS.Simple,
-    attributionControl: false
+    attributionControl: false,
+    minZoom: 0,
+    maxZoom: 4,
+    zoomControl: false
 });
+
+L.control.zoom({
+    position: 'topright'
+}).addTo(map);
 
 let bounds = [[0,0], [1000,1366]];
 let image = L.imageOverlay('./img/map.webp', bounds).addTo(map);
