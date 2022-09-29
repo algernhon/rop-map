@@ -5,7 +5,7 @@ const DATA_PATHS = {
             "color": "#2f4f22"
         },
         {
-            "name": "Galabriel",
+            "name": "Galadriel",
             "color": "#3c76b1"
         },
         {
@@ -49,7 +49,7 @@ const DATA_PATHS = {
             ]
         },
         {
-            "character": "Galabriel",
+            "character": "Galadriel",
             "season": 1,
             "episode": 1,
             "isConfirmed": true,

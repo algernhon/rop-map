@@ -173,7 +173,7 @@ const DATA_MARKERS = {
             "type": "point of interest",
             "image": "forodwaith.webp",
             "episodes": ["S01E01"],
-            "decription": "Forodwaith is the region in the far north of Middle-earth. This is the location where Galabriel leads a small force to look for evidence of Sauron's whereabouts.",
+            "decription": "Forodwaith is the region in the far north of Middle-earth. This is the location where Galadriel leads a small force to look for evidence of Sauron's whereabouts.",
             "readMoreUrl": "https://lotr.fandom.com/wiki/Khazad-d%C3%BBm",
             "isConfirmed": true
         },
@@ -188,32 +188,32 @@ const DATA_MARKERS = {
             "isConfirmed": true
         },
         {
-            "title": "Galabriel leaves the boat heading to Valinor",
+            "title": "Galadriel leaves the boat heading to Valinor",
             "coordinates": [591, 56],
             "type": "event",
             "image": "event-boat-galabriel.webp",
             "episodes": ["S01E01"],
-            "decription": "Galabriel decides not to join Valinor and wants to continue his quest to find Sauron. She jumps over the ship, finding herself alone in the middle of the Great Sea.",
+            "decription": "Galadriel decides not to join Valinor and wants to continue his quest to find Sauron. She jumps over the ship, finding herself alone in the middle of the Great Sea.",
             "readMoreUrl": "",
             "isConfirmed": true
         },
         {
-            "title": "Galabriel is attacked by a sea worm",
+            "title": "Galadriel is attacked by a sea worm",
             "coordinates": [561.5, 182.5],
             "type": "event",
             "image": "event-sea-worm.webp",
             "episodes": ["S01E01"],
-            "decription": "After being rescued by shipwrecked people on a raft, Galabriel is attacked by a sea worm.",
+            "decription": "After being rescued by shipwrecked people on a raft, Galadriel is attacked by a sea worm.",
             "readMoreUrl": "",
             "isConfirmed": true
         },
         {
-            "title": "Galabriel and Halbrand saved by Elendil",
+            "title": "Galadriel and Halbrand saved by Elendil",
             "coordinates": [530, 314.7],
             "type": "event",
             "image": "event-sea-save.webp",
             "episodes": ["S01E02", "S01E03"],
-            "decription": "Galabriel and Halbrand are rescued by a Numenor ship led by Elendil. They are escorted to Armenelos, the capital.",
+            "decription": "Galadriel and Halbrand are rescued by a Numenor ship led by Elendil. They are escorted to Armenelos, the capital.",
             "readMoreUrl": "",
             "isConfirmed": true
         },
