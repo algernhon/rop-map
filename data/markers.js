@@ -88,7 +88,7 @@ const DATA_MARKERS = {
             "isConfirmed": false
         },
         {
-            "title": "Harfoot's first location",
+            "title": "Norfield Glen",
             "coordinates": [682.4, 927.5],
             "type": "point of interest",
             "image": "harfoots-start.webp",
