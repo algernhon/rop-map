@@ -12,18 +12,18 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/leaflet.css"/>
     <link rel="stylesheet" href="css/coordinates.css"/>
-    <link rel="stylesheet" href="css/style.css?id=5"/>
+    <link rel="stylesheet" href="css/style.css?id=7"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
-    <script defer type="text/javascript" src="data/paths.js?version=5"></script>
-    <script defer type="text/javascript" src="data/markers.js?version=5"></script>
+    <script defer type="text/javascript" src="data/paths.js?version=7"></script>
+    <script defer type="text/javascript" src="data/markers.js?version=7"></script>
     <script defer src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
         integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
         crossorigin=""></script>
     <script defer src="js/plugins/coordinates.js"></script>
     <script defer src="js/plugins/snakeanim.js"></script>
-    <script defer src="js/main.js?version=5"></script>
+    <script defer src="js/main.js?version=7"></script>
 </head>
 <body>
     <main role="main" aria-label="Main menu">
@@ -62,6 +62,13 @@
                             <label class="pathsgrid__label" for="checkboxGalabriel" tabindex="0">
                                 <img src="img/portraits/galabriel.webp" alt="Galadriel's Path" />
                                 <p>Galadriel</p>
+                            </label>
+                        </div>
+                        <div class="pathsgrid__card">
+                            <input type="checkbox" name="Halbrand" id="checkboxHalbrand"  onchange="togglePathCheckbox(this)"/>
+                            <label class="pathsgrid__label" for="checkboxHalbrand" tabindex="0">
+                                <img src="img/portraits/halbrand.webp" alt="Halbrand's Path" />
+                                <p>Halbrand</p>
                             </label>
                         </div>
                         <div class="pathsgrid__card">
