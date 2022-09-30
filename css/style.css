@@ -195,6 +195,18 @@ input[type="checkbox"][id^="checkbox"] {
     border: 2px solid var(--color-white);
 }
 
+.update {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.update__text {
+    font-size: .7rem;
+    background-color: var(--color-lightblue);
+    padding: .2rem .8rem;
+    border-radius: var(--border-radius);
+}
+
 .footer {
     position: fixed;
     bottom: 0;

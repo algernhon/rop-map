@@ -51,7 +51,7 @@ function togglePathCheckbox(element) {
     const COLOR = DATA_PATHS.characters.find(color => color.name === element.name).color;
 
     if (element.checked) {
-        LIST_PATHS[element.name] = L.polyline(CHARACTER.coordinates, {color: COLOR, weight: 4, snakingSpeed: 300}).addTo(map).snakeIn();
+        LIST_PATHS[element.name] = L.polyline(CHARACTER.coordinates, {color: COLOR, weight: 4, snakingSpeed: 400}).addTo(map).snakeIn();
     } else {
         LIST_PATHS[element.name].removeFrom(map);
     }

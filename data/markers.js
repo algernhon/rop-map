@@ -102,7 +102,7 @@ const DATA_MARKERS = {
             "coordinates": [530.5, 949.7],
             "type": "village",
             "image": "tirharad.webp",
-            "episodes": ["S01E01", "S01E02", "S01E03"],
+            "episodes": ["S01E01", "S01E02", "S01E03", "S01E06"],
             "decription": "Tirharad is a village of Men location in west-central Mordor.",
             "readMoreUrl": "https://lotr.fandom.com/wiki/Tirharad",
             "isConfirmed": true
@@ -112,7 +112,7 @@ const DATA_MARKERS = {
             "coordinates": [524.2, 941],
             "type": "point of interest",
             "image": "ostirith.webp",
-            "episodes": ["S01E01", "S01E03", "S01E04"],
+            "episodes": ["S01E01", "S01E03", "S01E04", "S01E06"],
             "decription": "Ostirith is a watchtower used by Silvan Elves to watch over the settlements of Men.",
             "readMoreUrl": "https://lotr.fandom.com/wiki/Ostirith",
             "isConfirmed": true
@@ -129,13 +129,13 @@ const DATA_MARKERS = {
         },
         {
             "title": "Prison camp",
-            "coordinates": [481.2, 980.2],
+            "coordinates": [544.1, 953.5],
             "type": "point of interest",
             "image": "orccamp.webp",
             "episodes": ["S01E03", "S01E04"],
-            "decription": "Camp of Orcs where Arondir was prisonnier after his investigation at Hordern.",
+            "decription": "Camp of Orcs where Arondir was prisonnier after his investigation at Hordern. ",
             "readMoreUrl": "",
-            "isConfirmed": true
+            "isConfirmed": false
         },
         {
             "title": "Mithlond",
@@ -233,7 +233,7 @@ const DATA_MARKERS = {
             "type": "point of interest",
             "image": "hall-of-lore.webp",
             "episodes": ["S01E03"],
-            "decription": "TODO",
+            "decription": "Númenor's hall of lore.",
             "readMoreUrl": "",
             "isConfirmed": false
         },
@@ -245,6 +245,36 @@ const DATA_MARKERS = {
             "episodes": ["S01E01", "S01E02", "S01E05"],
             "decription": "Location of the Stranger crash.",
             "readMoreUrl": "",
+            "isConfirmed": true
+        },
+        {
+            "title": "Orodruin (Mount Doom) erupts",
+            "coordinates": [563.3, 956.5],
+            "type": "event",
+            "image": "volcano-erupts.webp",
+            "episodes": ["S01E06"],
+            "decription": "Following the battle of Tirharad, Adar's plan turned out to be successful. Ostirith's dam broke and all the water spilled out through the Orc tunnels into the magma chamber of the volcano.",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Mount_Doom",
+            "isConfirmed": true
+        },
+        {
+            "title": "Battle of Tirharad",
+            "coordinates": [532, 947.7],
+            "type": "event",
+            "image": "battle-tirharad.webp",
+            "episodes": ["S01E06"],
+            "decription": "Numenor's army, accompanied by Galadriel and Halbrand, comes to save Tirharad from the orcs to protect the lands of Men.",
+            "readMoreUrl": "",
+            "isConfirmed": true
+        },
+        {
+            "title": "Pelargir",
+            "coordinates": [496.2, 886.1],
+            "type": "village",
+            "image": "pelargir.webp",
+            "episodes": ["S01E06"],
+            "decription": "<strong>WARNING SPOILER - This zone has not been revealed in the show yet but its name appears on the official map.</strong><br /><br />If you want to know more about this zone, click on \"Read More\"",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Pelargir",
             "isConfirmed": true
         }
     ]
