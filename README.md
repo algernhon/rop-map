@@ -48,6 +48,10 @@ The **1.0 version** - *This is no longer a shame*
  
 This project is open to anyone who wants to help! Feel free to fork and pull request or to contact me on contact [at] rop-map.com.
 
-A big thanks to:
+A big thanks to our contributors:
 - MapleCreature
 - Webcrawler89
+- drunkill
+- eric-king
+- AhabFlanders
+- HamAndSomeCoffee
