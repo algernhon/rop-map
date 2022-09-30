@@ -69,7 +69,7 @@ const DATA_MARKERS = {
         },
         {
             "title": "The Braids",
-            "coordinates": [623.5, 1023.5],
+            "coordinates": [640.2, 1031.3],
             "type": "area",
             "image": "the-braids.webp",
             "episodes": ["S01E05"],
@@ -79,7 +79,7 @@ const DATA_MARKERS = {
         },
         {
             "title": "Unknown forest",
-            "coordinates": [640.2, 1063],
+            "coordinates": [648.8, 1062.8],
             "type": "area",
             "image": "unknown-forest.webp",
             "episodes": ["S01E05"],
@@ -149,7 +149,7 @@ const DATA_MARKERS = {
         },
         {
             "title": "Ost-in-Edhil",
-            "coordinates": [710.5, 740.8],
+            "coordinates": [707.6, 751],
             "type": "city",
             "image": "ost-in-edhil.webp",
             "episodes": ["S01E02", "S01E03", "S01E04"],
