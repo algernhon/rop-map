@@ -104,7 +104,7 @@ L.drawLocal = {
 				text: 'Delete last point'
 			},
 			buttons: {
-				polyline: 'Draw a polyline',
+				polyline: 'Measure distance',
 				polygon: 'Draw a polygon',
 				rectangle: 'Draw a rectangle',
 				circle: 'Draw a circle',

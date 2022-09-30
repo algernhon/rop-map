@@ -36,7 +36,7 @@ var drawPluginOptions = {
 
 var drawControl = new L.Control.Draw(drawPluginOptions);
 map.addControl(drawControl);
-L.Draw.Polyline.prototype._onTouch = L.Util.falseFn;
+L.Draw.Polyline.prototype._onTouch = L.Util.falseFn; // Fix for touchscreen
 
 let bounds = [[0,0], [1000,1366]];
 let image = L.imageOverlay('./img/map.webp', bounds).addTo(map);
