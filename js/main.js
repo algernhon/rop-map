@@ -12,9 +12,30 @@ let map = L.map('map', {
     zoomControl: false
 });
 
+// Set zoom panel to the top right
 L.control.zoom({
     position: 'topright'
 }).addTo(map);
+
+var drawPluginOptions = {
+    position: 'topright',
+    draw: {
+        polyline: {
+            shapeOptions: {
+                color: '#5e81ac',
+                weight: 4
+            }
+        },
+        polygon: false,
+        circle: false,
+        rectangle: false,
+        circlemarker: false,
+        marker: false
+    }
+};
+
+var drawControl = new L.Control.Draw(drawPluginOptions);
+map.addControl(drawControl);
 
 let bounds = [[0,0], [1000,1366]];
 let image = L.imageOverlay('./img/map.webp', bounds).addTo(map);
