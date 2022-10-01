@@ -31,7 +31,7 @@ The **0.1 version** - *Still clunky, but public ready*
  - [X] Show the path of main characters
  - [X] Show the main RoP places
  - [X] Design a decent interface
- - [ ] Correct typos, fix up writting error
+ - [X] Correct typos, fix up writting error
 
 The **1.0 version** - *This is no longer a shame*
  - [ ] Make a tiled version of the map *(no more 8mb loading at start)*
