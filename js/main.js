@@ -79,6 +79,20 @@ function togglePathCheckbox(element) {
     }
 }
 
+/*
+ * A11Y Function: Trigger checkbox when using keyboard on focused label
+ *
+ * @param event of the label                
+*/
+function interactionLabel(event) {
+    const checkbox = event.target.control;
+
+    if (event.keyCode === 13 || event.keyCode === 32) {
+        checkbox.checked === true ? checkbox.checked = false : checkbox.checked = true;
+        togglePathCheckbox(event.target.control);
+    }
+}
+
 function hideshow() {
     const button = document.getElementById("main_button");
     const menu = document.getElementById("main");
