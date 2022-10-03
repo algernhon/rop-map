@@ -241,9 +241,21 @@ input[type="checkbox"][id^="checkbox"] {
     font-size: .6rem;
 }
 
-.footer__github {
+.footer__social {
     padding: .5rem;
     text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.footer__social div {
+    opacity: .5;
+    transition: opacity .5s;
+}
+
+.footer__social div:hover {
+    opacity: 1;
 }
 
 /* Leaflet override */
