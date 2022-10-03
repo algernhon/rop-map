@@ -38,6 +38,7 @@ input[type="checkbox"][id^="checkbox"] {
     display: none;
 }
 
+/* Main */
 #map {
     background-color: var(--color-darkerblue);
     height: 100vh;
@@ -207,12 +208,31 @@ input[type="checkbox"][id^="checkbox"] {
     border-radius: var(--border-radius);
 }
 
+/* Section: Range Select */
+.rangeselect {
+    position: fixed;
+    bottom: 10px;
+    width: 100vw;
+    z-index: 1000;
+}
+
+.rangeselect__wrapper {
+    background: var(--color-blue);
+    border-radius: var(--border-radius);
+    color: var(--color-white);
+    margin: auto;
+    padding: 0.2rem 2rem;
+    width: 80%;
+}
+
+/* Footer */
 .footer {
     position: fixed;
     bottom: 0;
     right: 0;
     z-index: 1000;
     font-size: .6rem;
+    display: none;
 }
 
 .footer__copyright {
@@ -298,4 +318,10 @@ input[type="checkbox"][id^="checkbox"] {
     padding-top: 1rem;
     font-size: .7rem;
     border-top: 1px dashed var(--color-blue);
+}
+
+@media screen and (max-width: 600px) {
+    .rs-container .rs-scale span ins {
+        rotate: -15deg;
+    }
 }

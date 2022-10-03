@@ -1,9 +1,25 @@
-// List of current layers
+// Global variables
 const LIST_PATHS = {};
+const CURRENT_CHAR = [];
+const CURRENT_RANGE = [null, null];
 
-/*
- * Leaflet map setup
-*/
+const PATH_SPEED_ANIMATION = 400;
+const PATH_WEIGHT = 4;
+
+// Slider for the episode timeline
+const timelineSlider = new rSlider({
+    target: '#timelineSlider',
+    show: ['Prologue', 'Episode 1', 'Episode 2', 'Episode 3', 'Episode 4', 'Episode 5', 'Episode 6'],
+    values: [{"episode": 0, "season": 1}, {"episode": 1, "season": 1}, {"episode": 2, "season": 1}, {"episode": 3, "season": 1}, {"episode": 4, "season": 1}, {"episode": 5, "season": 1}, {"episode": 6, "season": 1}],
+    range: true,
+    tooltip: false,
+    scale: true,
+    labels: true,
+    onChange: (vals) => timelineChange(vals)
+});
+
+
+// Leaflet map setup
 let map = L.map('map', {
     crs: L.CRS.Simple,
     attributionControl: false,
@@ -17,6 +33,14 @@ L.control.zoom({
     position: 'topright'
 }).addTo(map);
 
+// Show coordinates
+let c = new L.Control.Coordinates();
+c.addTo(map);
+map.on('click', function(e) {
+	c.setCoordinates(e);
+});
+
+// Draw options for measure distance feature
 var drawPluginOptions = {
     position: 'topright',
     draw: {
@@ -38,24 +62,17 @@ var drawControl = new L.Control.Draw(drawPluginOptions);
 map.addControl(drawControl);
 L.Draw.Polyline.prototype._onTouch = L.Util.falseFn; // Fix for touchscreen
 
+// Set the custom map
 let bounds = [[0,0], [1000,1366]];
 let image = L.imageOverlay('./img/map.webp', bounds).addTo(map);
 map.fitBounds(bounds);
 
-/* 
- * Plugin to show coordinates on click
-*/
-let c = new L.Control.Coordinates();
-c.addTo(map);
-map.on('click', function(e) {
-	c.setCoordinates(e);
-});
 
 /* 
  * Alright, this thing is a real mess, need to be refactored asap
 */
 DATA_MARKERS.markers.forEach(marker => {
-    const confirmed = (marker.isConfirmed) ? ""  : "<div class='tooltip-tag tooltip-tag--unconfirmed'>coordonates not confirmed</div>";
+    const confirmed = (marker.isConfirmed) ? ""  : "<div class='tooltip-tag tooltip-tag--unconfirmed'>coordinates not confirmed</div>";
     const readMore = (marker.readMoreUrl) ? "<div class='tooltip-moreinfo'><a href='" + marker.readMoreUrl + "' target='_blank'>Read more about " + marker.title + "</a></div>"  : "";
     const type = DATA_MARKERS.types.find(type => type.name === marker.type);
 
@@ -64,19 +81,66 @@ DATA_MARKERS.markers.forEach(marker => {
 });
 
 /*
- * Function that draw or remove a path from the map
+ * Function that triggers setPath function through an input 
  *
  * @param element the input checked/unchecked by the user
 */
 function togglePathCheckbox(element) {
-    const CHARACTER = DATA_PATHS.paths.find(path => path.character === element.name);
-    const COLOR = DATA_PATHS.characters.find(color => color.name === element.name).color;
+    setPath(element.name);
+}
 
-    if (element.checked) {
-        LIST_PATHS[element.name] = L.polyline(CHARACTER.coordinates, {color: COLOR, weight: 4, snakingSpeed: 400}).addTo(map).snakeIn();
-    } else {
-        LIST_PATHS[element.name].removeFrom(map);
+/*
+ * Function that draw or remove a path from the map
+ *
+ * @param element Html checkbox
+*/
+function setPath(element) {
+    let characterName = element.name;
+
+    if (LIST_PATHS[characterName] === undefined) {
+        LIST_PATHS[characterName] = L.layerGroup(getPolylinesFromName(characterName), { snakingPause: PATH_SPEED_ANIMATION }).addTo(map).snakeIn();
+    } else
+    {
+        LIST_PATHS[characterName].removeFrom(map);
+        delete LIST_PATHS[characterName];
     }
+}
+
+/*
+ * Function that refresh all polylines drawn on the map
+ *
+*/
+function refreshTimelinePaths() {
+    Object.keys(LIST_PATHS).forEach(characterName => {
+        LIST_PATHS[characterName].removeFrom(map);
+        LIST_PATHS[characterName] = L.layerGroup(getPolylinesFromName(characterName)).addTo(map);
+    });
+
+}
+
+/*
+ * Function that returns every polyline of a character
+ *
+ * @param characterName string Name of the character
+ * @return array of L.Polyline
+*/
+function getPolylinesFromName(characterName) {
+    let characterPaths, layerArray = [];
+
+    characterPaths = DATA_PATHS.paths.filter(path => 
+        path.character === characterName && 
+        path.season >= CURRENT_RANGE[0].season && 
+        path.season <= CURRENT_RANGE[1].season &&
+        path.episode >= CURRENT_RANGE[0].episode &&
+        path.episode <= CURRENT_RANGE[1].episode);
+    characterColor = DATA_PATHS.characters.find(color => color.name === characterName).color;
+
+    characterPaths.forEach(characterPath => {
+        let polyLine = L.polyline(characterPath.coordinates, {color: characterColor, weight: PATH_WEIGHT});
+        layerArray.push(polyLine);
+    });
+
+    return layerArray;
 }
 
 /*
@@ -89,10 +153,14 @@ function interactionLabel(event) {
 
     if (event.keyCode === 13 || event.keyCode === 32) {
         checkbox.checked === true ? checkbox.checked = false : checkbox.checked = true;
-        togglePathCheckbox(event.target.control);
+        setPath(event.target.control);
     }
 }
 
+/*
+ * Function: Hide or Show the main menu
+ *           
+*/
 function hideshow() {
     const button = document.getElementById("main_button");
     const menu = document.getElementById("main");
@@ -107,4 +175,21 @@ function hideshow() {
         button.classList.remove("main_button--hidden");
         menu.classList.remove("menu--hidden");
     }
+}
+
+/*
+ *  Function: Setter for episode range
+ *
+ * @param range Array of 2 ranges                
+*/
+function setCurrentRange(range) {
+    if (range != null && range.length === 2) {
+        CURRENT_RANGE[0] = range[0];
+        CURRENT_RANGE[1] = range[1];
+    }
+}
+
+function timelineChange(values) {
+    setCurrentRange(values);
+    refreshTimelinePaths(); // Refresh all the path on the map
 }

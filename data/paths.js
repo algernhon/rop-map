@@ -29,11 +29,29 @@ const DATA_PATHS = {
         {
             "character": "Nori",
             "season": 1,
-            "episode": 5,
+            "episode": 1,
             "isConfirmed": true,
             "coordinates": [
                 [682.4, 927.5],
+                [683, 939.8]
+            ]
+        },
+        {
+            "character": "Nori",
+            "season": 1,
+            "episode": 2,
+            "isConfirmed": true,
+            "coordinates": [
                 [683, 939.8],
+                [682.4, 927.5]
+            ]
+        },
+        {
+            "character": "Nori",
+            "season": 1,
+            "episode": 5,
+            "isConfirmed": true,
+            "coordinates": [
                 [682.4, 927.5],
                 [685.4, 912],
                 [683, 898],
@@ -79,8 +97,26 @@ const DATA_PATHS = {
                 [773.5, 551.4],
                 [767.1, 506.4],
                 [734, 433],
+                [154, 15]
+            ]
+        },
+        {
+            "character": "Galadriel",
+            "season": 1,
+            "episode": 2,
+            "isConfirmed": true,
+            "coordinates": [
                 [154, 15],
                 [127, 46.5],
+                [83, 63]
+            ]
+        },
+        {
+            "character": "Galadriel",
+            "season": 1,
+            "episode": 3,
+            "isConfirmed": true,
+            "coordinates": [
                 [83, 63],
                 [71, 97.5],
                 [71.5, 144],
@@ -104,6 +140,15 @@ const DATA_PATHS = {
                 [168.7, 191.3],
                 [171, 196.4],
                 [172.6, 216.8],
+                [168.2, 191.7]
+            ]
+        },
+        {
+            "character": "Galadriel",
+            "season": 1,
+            "episode": 6,
+            "isConfirmed": true,
+            "coordinates": [
                 [168.2, 191.7],
                 [163.7, 190.3],
                 [160.8, 188.4],
@@ -154,7 +199,7 @@ const DATA_PATHS = {
         {
             "character": "Elrond",
             "season": 1,
-            "episode": 5,
+            "episode": 2,
             "isConfirmed": true,
             "coordinates": [
                 [780.5, 570.3],
@@ -182,8 +227,64 @@ const DATA_PATHS = {
                 [723.4, 762.4],
                 [727.7, 767.6],
                 [729.2, 771.9],
+                [730.1, 777.3]
+            ]
+        },
+        {
+            "character": "Elrond",
+            "season": 1,
+            "episode": 4,
+            "isConfirmed": true,
+            "coordinates": [
                 [730.1, 777.3],
-                [779.6, 570.5]
+                [729.2, 771.9],
+                [727.7, 767.6],
+                [723.4, 762.4],
+                [719.9, 760.1],
+                [717, 756.8],
+                [715.5, 752.8],
+                [707.6, 751],
+                [715.5, 754.8],
+                [717, 758.8],
+                [719.9, 762.1],
+                [723.4, 764.4],
+                [727.7, 769.6],
+                [729.2, 773.9],
+                [730.1, 777.3],
+            ]
+        },
+        {
+            "character": "Elrond",
+            "season": 1,
+            "episode": 5,
+            "isConfirmed": true,
+            "coordinates": [
+                [730.1, 777.3],
+                [729.2, 771.9],
+                [727.7, 767.6],
+                [723.4, 762.4],
+                [719.9, 760.1],
+                [717, 756.8],
+                [715.5, 752.8],
+                [713.8, 742.7],
+                [710.1, 740.4],
+                [703.8, 738.2],
+                [710, 706.2],
+                [718.2, 703.9],
+                [724.6, 700.6],
+                [733.5, 693.1],
+                [743.1, 678.75],
+                [748, 669],
+                [749.8, 647],
+                [752.9, 643.1],
+                [765.7, 635.4],
+                [770, 628.2],
+                [773.7, 624.1],
+                [780.6, 620.7],
+                [780.5, 611,2],
+                [783.9, 602],
+                [783.6, 584.6],
+                [780.5, 570.3]
             ]
         },
         {
@@ -197,10 +298,37 @@ const DATA_PATHS = {
                 [524.6, 941.5],
                 [530.6, 949.5],
                 [538.4, 952.6],
+            ]
+        },        
+        {
+            "character": "Arondir",
+            "season": 1,
+            "episode": 3,
+            "isConfirmed": true,
+            "coordinates": [
+                [538.4, 952.6],
+                [544.1, 953.5]
+            ]
+        },
+        {
+            "character": "Arondir",
+            "season": 1,
+            "episode": 4,
+            "isConfirmed": true,
+            "coordinates": [
                 [544.1, 953.5],
                 [538.9, 950.1],
                 [530.5, 949.7],
                 [528.2, 944.6],
+                [524.2, 941]
+            ]
+        },
+        {
+            "character": "Arondir",
+            "season": 1,
+            "episode": 6,
+            "isConfirmed": true,
+            "coordinates": [
                 [524.2, 941],
                 [529.5, 943.8],
                 [530.5, 949.7]
@@ -209,10 +337,41 @@ const DATA_PATHS = {
         {
             "character": "Elendil",
             "season": 1,
-            "episode": 1,
+            "episode": 3,
             "isConfirmed": true,
             "coordinates": [
+                [83, 63],
+                [71, 97.5],
+                [71.5, 144],
+                [114.5, 193.5],
+                [121.6, 191.8],
+                [125.8, 186.6],
+                [128.8, 184.8],
+                [130.8, 184.4],
+                [132.37, 183.7],
+                [137.2, 184.2],
+                [140.6, 186.3],
+                [142.4, 187.8],
+                [143.7, 188],
+                [145.5, 187.7],
+                [146.7, 186.1],
+                [147.5, 185],
+                [150.5, 184.2],
+                [153.8, 184.3],
+                [160.8, 187.4],
+                [163.7, 189.3],
                 [168.6, 191.5],
+                [171, 196.4],
+                [172.6, 216.8],
+                [168.2, 191.7]
+            ]
+        },
+        {
+            "character": "Elendil",
+            "season": 1,
+            "episode": 6,
+            "isConfirmed": true,
+            "coordinates": [
                 [172.6, 216.8],
                 [168.6, 191.5],
                 [163.7, 190.3],
@@ -264,8 +423,8 @@ const DATA_PATHS = {
         {
             "character": "Halbrand",
             "season": 1,
-            "episode": 1,
-            "isConfirmed": true,
+            "episode": 0,
+            "isConfirmed": false,
             "coordinates": [
                 [538.4, 952.6],
                 [544.3, 944],
@@ -288,7 +447,25 @@ const DATA_PATHS = {
                 [344, 256],
                 [278, 163],
                 [246.5, 70],
+                [127, 46.5]
+            ]
+        },
+        {
+            "character": "Halbrand",
+            "season": 1,
+            "episode": 2,
+            "isConfirmed": true,
+            "coordinates": [
                 [127, 46.5],
+                [83, 63]
+            ]
+        },
+        {
+            "character": "Halbrand",
+            "season": 1,
+            "episode": 3,
+            "isConfirmed": true,
+            "coordinates": [
                 [83, 63],
                 [71, 97.5],
                 [71.5, 144],
@@ -309,6 +486,15 @@ const DATA_PATHS = {
                 [153.8, 184.3],
                 [160.8, 187.4],
                 [163.7, 189.3],
+                [168.7, 191.3]
+            ]
+        },
+        {
+            "character": "Halbrand",
+            "season": 1,
+            "episode": 6,
+            "isConfirmed": true,
+            "coordinates": [
                 [168.7, 191.3],
                 [163.7, 190.3],
                 [160.8, 188.4],
