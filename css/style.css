@@ -319,3 +319,9 @@ input[type="checkbox"][id^="checkbox"] {
     font-size: .7rem;
     border-top: 1px dashed var(--color-blue);
 }
+
+@media screen and (max-width: 600px) {
+    .rs-container .rs-scale span ins {
+        rotate: -15deg;
+    }
+}
