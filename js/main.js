@@ -92,28 +92,13 @@ function togglePathCheckbox(element) {
 /*
  * Function that draw or remove a path from the map
  *
- * @param characterNames string of the name(s) of the character(s)
+ * @param element Html checkbox
 */
 function setPath(element) {
-    let characterName = element.name, characterPaths, characterColor, layerArray = [];
-    
+    let characterName = element.name;
+
     if (LIST_PATHS[characterName] === undefined) {
-        // Select every path that satisfy our filters (name, episode and season range)
-        characterPaths = DATA_PATHS.paths.filter(path => 
-            path.character === characterName && 
-            path.season >= CURRENT_RANGE[0].season && 
-            path.season <= CURRENT_RANGE[1].season &&
-            path.episode >= CURRENT_RANGE[0].episode &&
-            path.episode <= CURRENT_RANGE[1].episode);
-        characterColor = DATA_PATHS.characters.find(color => color.name === characterName).color;
-
-        characterPaths.forEach(characterPath => {
-            let polyLine = L.polyline(characterPath.coordinates, {color: characterColor, weight: PATH_WEIGHT, snakingSpeed: PATH_SPEED_ANIMATION});
-
-            layerArray.push(polyLine);
-        });
-
-        LIST_PATHS[characterName] = L.layerGroup(layerArray, { snakingPause: 400 }).addTo(map).snakeIn();
+        LIST_PATHS[characterName] = L.layerGroup(getPolylinesFromName(characterName), { snakingPause: PATH_SPEED_ANIMATION }).addTo(map).snakeIn();
     } else
     {
         LIST_PATHS[characterName].removeFrom(map);
@@ -121,29 +106,41 @@ function setPath(element) {
     }
 }
 
+/*
+ * Function that refresh all polylines drawn on the map
+ *
+*/
 function refreshTimelinePaths() {
-    let characterPaths, characterColor, layerArray = [];
-
     Object.keys(LIST_PATHS).forEach(characterName => {
-        // Select every path that satisfy our filters (name, episode and season range)
-        characterPaths = DATA_PATHS.paths.filter(path => 
-            path.character === characterName && 
-            path.season >= CURRENT_RANGE[0].season && 
-            path.season <= CURRENT_RANGE[1].season &&
-            path.episode >= CURRENT_RANGE[0].episode &&
-            path.episode <= CURRENT_RANGE[1].episode);
-        characterColor = DATA_PATHS.characters.find(color => color.name === characterName).color;
-
-        characterPaths.forEach(characterPath => {
-            let polyLine = L.polyline(characterPath.coordinates, {color: characterColor, weight: PATH_WEIGHT, snakingSpeed: PATH_SPEED_ANIMATION});
-
-            layerArray.push(polyLine);
-        });
-
         LIST_PATHS[characterName].removeFrom(map);
-        LIST_PATHS[characterName] = L.layerGroup(layerArray).addTo(map);
+        LIST_PATHS[characterName] = L.layerGroup(getPolylinesFromName(characterName)).addTo(map);
     });
 
+}
+
+/*
+ * Function that returns every polyline of a character
+ *
+ * @param characterName string Name of the character
+ * @return array of L.Polyline
+*/
+function getPolylinesFromName(characterName) {
+    let characterPaths, layerArray = [];
+
+    characterPaths = DATA_PATHS.paths.filter(path => 
+        path.character === characterName && 
+        path.season >= CURRENT_RANGE[0].season && 
+        path.season <= CURRENT_RANGE[1].season &&
+        path.episode >= CURRENT_RANGE[0].episode &&
+        path.episode <= CURRENT_RANGE[1].episode);
+    characterColor = DATA_PATHS.characters.find(color => color.name === characterName).color;
+
+    characterPaths.forEach(characterPath => {
+        let polyLine = L.polyline(characterPath.coordinates, {color: characterColor, weight: PATH_WEIGHT});
+        layerArray.push(polyLine);
+    });
+
+    return layerArray;
 }
 
 /*
