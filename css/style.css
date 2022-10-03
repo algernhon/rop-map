@@ -221,7 +221,7 @@ input[type="checkbox"][id^="checkbox"] {
     border-radius: var(--border-radius);
     color: var(--color-white);
     margin: auto;
-    padding: 0 2rem;
+    padding: 0.2rem 2rem;
     width: 80%;
 }
 
