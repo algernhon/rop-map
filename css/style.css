@@ -208,6 +208,13 @@ input[type="checkbox"][id^="checkbox"] {
     border-radius: var(--border-radius);
 }
 
+.credit {
+    font-size: .6rem;
+    text-align: center;
+    margin-top: 1rem;
+    opacity: .5;
+}
+
 /* Section: Range Select */
 .rangeselect {
     position: fixed;
@@ -232,15 +239,6 @@ input[type="checkbox"][id^="checkbox"] {
     right: 0;
     z-index: 1000;
     font-size: .6rem;
-    display: none;
-}
-
-.footer__copyright {
-    background-color: var(--color-darkblue);
-    color: var(--color-white);
-    padding: .2rem .5rem;
-    border-top-left-radius: 5px;
-    text-align: center;
 }
 
 .footer__github {
