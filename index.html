@@ -14,12 +14,12 @@
     <link rel="stylesheet" href="css/coordinates.css"/>
     <link rel="stylesheet" href="css/leaflet.draw.css"/>
     <link rel="stylesheet" href="css/range-slider.css"/>
-    <link rel="stylesheet" href="css/style.css?id=17"/>
+    <link rel="stylesheet" href="css/style.css?id=18"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
-    <script defer type="text/javascript" src="data/paths.js?version=17"></script>
-    <script defer type="text/javascript" src="data/markers.js?version=17"></script>
+    <script defer type="text/javascript" src="data/paths.js?version=18"></script>
+    <script defer type="text/javascript" src="data/markers.js?version=18"></script>
     <script defer src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
         integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
         crossorigin=""></script>
@@ -27,7 +27,7 @@
     <script defer src="js/plugins/coordinates.js"></script>
     <script defer src="js/plugins/range-slider.js"></script>
     <script defer src="js/plugins/snakeanim.js"></script>
-    <script defer src="js/main.js?version=17"></script>
+    <script defer src="js/main.js?version=18"></script>
 </head>
 <body>
     <main role="main" aria-label="Main menu">
@@ -38,7 +38,7 @@
                     <p class="menu__header-description">A Rings Of Power interactive map</p>
                 </header>
                 <div class="menu__paths">
-                    <h2>Paths</h2>
+                    <h2>Rings Of Power</h2>
                     <div class="pathsgrid">
                         <div class="pathsgrid__card">
                             <input type="checkbox" name="Arondir" id="checkboxArondir" onchange="setPath(this)"/>
@@ -80,6 +80,30 @@
                             <label class="pathsgrid__label" for="checkboxNori" tabindex="0" onkeydown="interactionLabel(event)">
                                 <img src="img/portraits/harfoots.webp" alt="Nori's Path" />
                                 <p>Nori</p>
+                            </label>
+                        </div>
+                        <div id="sauron__meme" class="pathsgrid__card">
+                            <input type="checkbox" name="Sauron" id="checkboxSauron" onchange="clickSauron()" />
+                            <label class="pathsgrid__label" for="checkboxSauron" tabindex="0" onkeydown="clickSauron()">
+                                <img src="img/portraits/sauron.webp" alt="Sauron's Path" />
+                                <p>Sauron</p>
+                            </label>
+                        </div>
+                    </div>
+                    <h2>Movies</h2>
+                    <div class="pathsgrid">
+                        <div class="pathsgrid__card">
+                            <input type="checkbox" name="Frodo and Sam" id="checkboxFrodoSam" onchange="setPath(this)"/>
+                            <label class="pathsgrid__label" for="checkboxFrodoSam" tabindex="0" onkeydown="interactionLabel(event)" >
+                                <img src="img/portraits/frodosam.webp" alt="Frodo and Sam Path" />
+                                <p>Frodo & Sam</p>
+                            </label>
+                        </div>
+                        <div class="pathsgrid__card">
+                            <input type="checkbox" name="Bilbo and Thorin" id="checkboxThorin" onchange="setPath(this)"/>
+                            <label class="pathsgrid__label" for="checkboxThorin" tabindex="0" onkeydown="interactionLabel(event)" >
+                                <img src="img/portraits/thorin.webp" alt="Bilbo and Thorin" />
+                                <p>Bilbo & Thorin</p>
                             </label>
                         </div>
                     </div>
