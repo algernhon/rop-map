@@ -127,12 +127,16 @@ function refreshTimelinePaths() {
 function getPolylinesFromName(characterName) {
     let characterPaths, layerArray = [];
 
+    // Season >= 100 are old movies (Lotr & Hobbits)
     characterPaths = DATA_PATHS.paths.filter(path => 
-        path.character === characterName && 
+        (path.character === characterName && 
         path.season >= CURRENT_RANGE[0].season && 
         path.season <= CURRENT_RANGE[1].season &&
         path.episode >= CURRENT_RANGE[0].episode &&
-        path.episode <= CURRENT_RANGE[1].episode);
+        path.episode <= CURRENT_RANGE[1].episode) || (
+            path.character === characterName &&
+            path.season >= 100
+        ));
     characterColor = DATA_PATHS.characters.find(color => color.name === characterName).color;
 
     characterPaths.forEach(characterPath => {
@@ -189,7 +193,28 @@ function setCurrentRange(range) {
     }
 }
 
-function timelineChange(values) {
-    setCurrentRange(values);
+/*
+ *  Function: Refresh timeline
+ *
+ * @param range Array of 2 ranges                
+*/
+function timelineChange(range) {
+    setCurrentRange(range);
     refreshTimelinePaths(); // Refresh all the path on the map
 }
+
+// Well well well...
+function clickSauron() {
+    document.getElementById('sauron__meme').classList.add('sauron__hidden');
+}
+
+// Dev, show paths on console when drawing on the map
+map.on(L.Draw.Event.CREATED, function (e) {
+    var layer = e.layer, output = "";
+
+    layer.getLatLngs().forEach(element => {
+        output += `[${element.lat}, ${element.lng}], `
+    });
+
+    console.log(output);
+ });

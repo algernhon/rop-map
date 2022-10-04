@@ -39,7 +39,7 @@
                     <p class="menu__header-description">A Rings Of Power interactive map</p>
                 </header>
                 <div class="menu__paths">
-                    <h2>Paths</h2>
+                    <h2>Rings Of Power</h2>
                     <div class="pathsgrid">
                         <div class="pathsgrid__card">
                             <input type="checkbox" name="Arondir" id="checkboxArondir" onchange="setPath(this)"/>
@@ -81,6 +81,30 @@
                             <label class="pathsgrid__label" for="checkboxNori" tabindex="0" onkeydown="interactionLabel(event)">
                                 <img src="img/portraits/harfoots.webp" alt="Nori's Path" />
                                 <p>Nori</p>
+                            </label>
+                        </div>
+                        <div id="sauron__meme" class="pathsgrid__card">
+                            <input type="checkbox" name="Sauron" id="checkboxSauron" onchange="clickSauron()" />
+                            <label class="pathsgrid__label" for="checkboxSauron" tabindex="0" onkeydown="clickSauron()">
+                                <img src="img/portraits/sauron.webp" alt="Sauron's Path" />
+                                <p>Sauron</p>
+                            </label>
+                        </div>
+                    </div>
+                    <h2>Movies</h2>
+                    <div class="pathsgrid">
+                        <div class="pathsgrid__card">
+                            <input type="checkbox" name="Frodo and Sam" id="checkboxFrodoSam" onchange="setPath(this)"/>
+                            <label class="pathsgrid__label" for="checkboxFrodoSam" tabindex="0" onkeydown="interactionLabel(event)" >
+                                <img src="img/portraits/frodosam.webp" alt="Frodo and Sam Path" />
+                                <p>Frodo & Sam</p>
+                            </label>
+                        </div>
+                        <div class="pathsgrid__card">
+                            <input type="checkbox" name="Bilbo and Thorin" id="checkboxThorin" onchange="setPath(this)"/>
+                            <label class="pathsgrid__label" for="checkboxThorin" tabindex="0" onkeydown="interactionLabel(event)" >
+                                <img src="img/portraits/thorin.webp" alt="Bilbo and Thorin" />
+                                <p>Bilbo & Thorin</p>
                             </label>
                         </div>
                     </div>
