@@ -140,7 +140,13 @@ function getPolylinesFromName(characterName) {
     characterColor = DATA_PATHS.characters.find(color => color.name === characterName).color;
 
     characterPaths.forEach(characterPath => {
-        let polyLine = L.polyline(characterPath.coordinates, {color: characterColor, weight: PATH_WEIGHT});
+        let polyLine = L.polyline(characterPath.coordinates, 
+            {
+                color: characterColor, 
+                weight: PATH_WEIGHT,
+                dashArray: characterPath.isConfirmed ? '0' : '10 10 1 10',
+                opacity: characterPath.isConfirmed ? '1' : '.7'
+            });
         layerArray.push(polyLine);
     });
 
