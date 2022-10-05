@@ -231,6 +231,7 @@ input[type="checkbox"][id^="checkbox"] {
 
 /* Section: Range Select */
 .rangeselect {
+    box-shadow: var(--box-shadow);
     position: fixed;
     bottom: 10px;
     width: 100vw;
@@ -242,8 +243,9 @@ input[type="checkbox"][id^="checkbox"] {
     border-radius: var(--border-radius);
     color: var(--color-white);
     margin: auto;
-    padding: 0.2rem 2rem;
+    padding: 1rem 3rem;
     width: 80%;
+    height: 60px;
 }
 
 /* Footer */
@@ -344,56 +346,52 @@ input[type="checkbox"][id^="checkbox"] {
     border-top: 1px dashed var(--color-blue);
 }
 
-@media screen and (max-width: 600px) {
-    .rs-container .rs-scale span ins {
-        rotate: -15deg;
+/* Nouislider override */
+
+.noUi-target {
+    box-shadow: none;
+    border: none;
+}
+
+.noUi-handle {
+    box-shadow: none;
+    background-color: var(--color-darkerblue);
+}
+
+.noUi-connect {
+    background-color: var(--color-lightblue);
+}
+
+.noUi-value-sub {
+    color: var(--color-white);
+    rotate: -15deg;
+    margin-top: 5px;
+    font-size: .7rem;
+}
+
+@media screen and (min-width: 600px) {
+    .noUi-value-sub {
+        rotate: none;
     }
 }
 
-.sauron__hidden {
-    animation: fadeInSauron 4s linear;
-    animation-fill-mode: forwards;
-    overflow: hidden;
+.noUi-marker-sub {
+    background-color: var(--color-white-grey);
 }
 
-@keyframes fadeInSauron {
-    1% {
-        translate: 0 3px;
-    }
+.noUi-pips-horizontal {
+    padding: 0;
+}
 
-    3% {
-        translate: 0 -3px;
-    }
+.noUi-horizontal {
+    height: 10px;
+}
 
-    5% {
-        translate: 0 3px;
-    }
+.noUi-horizontal .noUi-handle {
+    height: 24px;
+    top: -7px;
+}
 
-    7% {
-        translate: 0 -3px;
-    }
-
-    9% {
-        translate: 0 3px;
-    }
-
-    11% {
-        translate: 0 -3px;
-    }
-
-    12% {
-        translate: 0 0;
-    }
-
-    99% {
-        height: inherit;
-        width: inherit;
-        opacity: 0;
-    }
-
-    100% {
-        height: 0;
-        width: 0;
-        opacity: 0;
-    }
+.noUi-handle::after, .noUi-handle::before {
+    height: 10px;
 }
