@@ -6,19 +6,6 @@ const CURRENT_RANGE = [null, null];
 const PATH_SPEED_ANIMATION = 400;
 const PATH_WEIGHT = 4;
 
-// Slider for the episode timeline
-const timelineSlider = new rSlider({
-    target: '#timelineSlider',
-    show: ['Prologue', 'Episode 1', 'Episode 2', 'Episode 3', 'Episode 4', 'Episode 5', 'Episode 6'],
-    values: [{"episode": 0, "season": 1}, {"episode": 1, "season": 1}, {"episode": 2, "season": 1}, {"episode": 3, "season": 1}, {"episode": 4, "season": 1}, {"episode": 5, "season": 1}, {"episode": 6, "season": 1}],
-    range: true,
-    tooltip: false,
-    scale: true,
-    labels: true,
-    onChange: (vals) => timelineChange(vals)
-});
-
-
 // Leaflet map setup
 let map = L.map('map', {
     crs: L.CRS.Simple,
@@ -127,15 +114,13 @@ function refreshTimelinePaths() {
 function getPolylinesFromName(characterName) {
     let characterPaths, layerArray = [];
 
-    // Season >= 100 are old movies (Lotr & Hobbits)
+    // TODO : This thing will break on season 2
     characterPaths = DATA_PATHS.paths.filter(path => 
         (path.character === characterName && 
-        path.season >= CURRENT_RANGE[0].season && 
-        path.season <= CURRENT_RANGE[1].season &&
-        path.episode >= CURRENT_RANGE[0].episode &&
-        path.episode <= CURRENT_RANGE[1].episode) || (
+        path.episode >= CURRENT_RANGE[0] &&
+        path.episode <= CURRENT_RANGE[1]) || (
             path.character === characterName &&
-            path.season >= 100
+            path.season >= 100 // >= are movies
         ));
     characterColor = DATA_PATHS.characters.find(color => color.name === characterName).color;
 
@@ -209,11 +194,6 @@ function timelineChange(range) {
     refreshTimelinePaths(); // Refresh all the path on the map
 }
 
-// Well well well...
-function clickSauron() {
-    document.getElementById('sauron__meme').classList.add('sauron__hidden');
-}
-
 // Dev, show paths on console when drawing on the map
 map.on(L.Draw.Event.CREATED, function (e) {
     var layer = e.layer, output = "";
@@ -224,3 +204,34 @@ map.on(L.Draw.Event.CREATED, function (e) {
 
     console.log(output);
  });
+
+
+var slider = document.getElementById('slider');
+
+const listEpisodes = ['Prologue', 'Episode 1', 'Episode 2', 'Episode 3', 'Episode 4', 'Episode 5', 'Episode 6', 'Episode 7', 'Episode 8'];
+noUiSlider.create(slider, {
+    start: [0, 6],
+    connect: true,
+    step: 1,
+    range: {
+        'min': 0,
+        'max': 6
+    },
+    pips: {
+        mode: 'steps',
+        density: 100,
+        filter: (x) => 2,
+        format: {
+            to: function (value) {
+                return listEpisodes[value];
+            },
+            from: function (value) {
+                return Number(value);
+            }
+        }
+    }
+});
+
+slider.noUiSlider.on('update', function (values) {
+    timelineChange([Number(values[0]), Number(values[1])]);
+});
