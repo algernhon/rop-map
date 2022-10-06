@@ -31,7 +31,7 @@ h2 {
     font-size: 1rem;
     text-align: center;
     color: var(--color-white-grey);
-    writing-mode: sideways-lr;
+    writing-mode: vertical-rl;
 }
 
 @media screen and (min-width: 800px) {
@@ -59,7 +59,7 @@ input[type="checkbox"][id^="checkbox"] {
 
 .main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     position: fixed;
     bottom: 70px;
     z-index: 10000;
@@ -67,6 +67,7 @@ input[type="checkbox"][id^="checkbox"] {
 
 @media screen and (min-width: 800px) {
     .main {
+        flex-direction: row;
         top: 3vh;
         left: 0;
         right: unset;
@@ -76,16 +77,29 @@ input[type="checkbox"][id^="checkbox"] {
 
 .main_button {
     border: none;
-    background-color: var(--color-blue);
-    border-radius: 0 var(--border-radius) var(--border-radius) 0; 
+    background-color: var(--color-darkblue);
+    border-radius: var(--border-radius) var(--border-radius) 0 0; 
     color: var(--color-white);
-    height: 45px;
-    width: 25px;
-    padding-right: 5px;
+    height: 18px;
+    width: 200px;
+}
+@media screen and (min-width: 800px) {
+    .main_button {
+        border-radius: 0 var(--border-radius) var(--border-radius) 0; 
+        height: 45px;
+        width: 25px;
+        padding-right: 5px;
+    }
 }
 
 .main_button::after {
-    content: "<";
+    content: "˅";
+}
+
+@media screen and (min-width: 800px) {
+    .main_button::after {
+        content: "<";
+    }
 }
 
 .main_button--hidden {
@@ -93,7 +107,13 @@ input[type="checkbox"][id^="checkbox"] {
 }
 
 .main_button--hidden::after {
-    content: ">";
+    content: "˄";
+}
+
+@media screen and (min-width: 800px) {
+    .main_button--hidden::after {
+        content: ">";
+    }
 }
 
 .menu {
@@ -116,29 +136,18 @@ input[type="checkbox"][id^="checkbox"] {
 
 .menu--show {
     left: 0;
-    transition: left 1s;
+    transition: bottom 1s;
 }
 
 @media screen and (min-width: 800px) {
     .menu--show {
         left: 0;
-    }
-}
-
-.menu--hidden {
-    left: -200px;
-    transition: left 1s;
-}
-
-@media screen and (min-width: 800px) {
-    .menu--hidden {
-        left: -280px;
+        transition: left 1s;
     }
 }
 
 .menu__header {
     background-color: var(--color-darkblue);
-    border-top-right-radius: var(--border-radius);
     padding: .2rem 0;
     text-align: center;
     z-index: 10;
@@ -148,7 +157,6 @@ input[type="checkbox"][id^="checkbox"] {
 @media screen and (min-width: 800px) {
     .menu__header {
         box-shadow: var(--box-shadow);
-        border-radius: 0;
         padding: .5rem 0;
         width: 100%;
     }
@@ -176,7 +184,7 @@ input[type="checkbox"][id^="checkbox"] {
     flex-direction: row;
     overflow-x: scroll;
     overflow-y: hidden;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
 @media screen and (min-width: 800px) {
@@ -198,7 +206,7 @@ input[type="checkbox"][id^="checkbox"] {
 .pathsgrid {
     display: flex;
     flex-direction: row;
-    column-gap: 1rem;
+    column-gap: 1.2rem;
     align-items: center;
 }
 
@@ -270,11 +278,13 @@ input[type="checkbox"][id^="checkbox"] {
     background-color: var(--color-darkerblue);
     padding: .2rem .8rem;
     border-radius: var(--border-radius);
+    margin-top: 12px;
 }
 
 @media screen and (min-width: 800px) {
     .update__text {
         display: inline;
+        margin-top: 0;
     }
 }
 
@@ -288,7 +298,7 @@ input[type="checkbox"][id^="checkbox"] {
 
 @media screen and (min-width: 800px) {
     .credit {
-        display: initial;
+        display: block;
     }
 }
 
@@ -323,6 +333,31 @@ input[type="checkbox"][id^="checkbox"] {
         padding: 1rem 3rem;
         height: 60px;
         width: 80%;
+    }
+}
+
+.menu--hidden {
+    bottom: -90px;
+    transition: bottom 1s;
+}
+
+@media screen and (min-width: 800px) {
+    .menu--hidden {
+        bottom: unset;
+        left: -280px;
+        transition: left 1s;
+    }
+}
+
+.slider--hidden {
+    bottom: -70px;
+    transition: bottom 1s;
+}
+
+@media screen and (min-width: 800px) {
+    .slider--hidden {
+        bottom: 10px;
+        transition: none;
     }
 }
 
