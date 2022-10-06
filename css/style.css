@@ -217,7 +217,7 @@ input[type="checkbox"][id^="checkbox"] {
 
 .update__text {
     font-size: .7rem;
-    background-color: var(--color-lightblue);
+    background-color: var(--color-darkerblue);
     padding: .2rem .8rem;
     border-radius: var(--border-radius);
 }
@@ -226,7 +226,7 @@ input[type="checkbox"][id^="checkbox"] {
     font-size: .6rem;
     text-align: center;
     margin-top: 1rem;
-    opacity: .5;
+    opacity: .7;
 }
 
 /* Section: Range Select */
@@ -372,6 +372,7 @@ input[type="checkbox"][id^="checkbox"] {
 .noUi-target {
     box-shadow: none;
     border: none;
+    color: black;
 }
 
 .noUi-handle {
