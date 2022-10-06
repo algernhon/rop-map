@@ -28,11 +28,19 @@ html, body {
 }
 
 h2 {
-    font-size: 1.4rem;
+    font-size: 1rem;
     text-align: center;
     color: var(--color-white-grey);
-    margin-bottom: .5rem;
-    margin-top: .5rem;
+    writing-mode: sideways-lr;
+}
+
+@media screen and (min-width: 800px) {
+    h2 {
+        font-size: 1.4rem;
+        margin-bottom: .5rem;
+        margin-top: .5rem;
+        writing-mode: initial;
+    }
 }
 
 input[type="checkbox"][id^="checkbox"] {
@@ -53,9 +61,17 @@ input[type="checkbox"][id^="checkbox"] {
     display: flex;
     flex-direction: row;
     position: fixed;
-    top: 3vh;
-    left: 0;
+    bottom: 70px;
     z-index: 10000;
+}
+
+@media screen and (min-width: 800px) {
+    .main {
+        top: 3vh;
+        left: 0;
+        right: unset;
+        bottom: unset;
+    }
 }
 
 .main_button {
@@ -81,20 +97,19 @@ input[type="checkbox"][id^="checkbox"] {
 }
 
 .menu {
-    border-radius: 0 0 var(--border-radius) 0;
     box-shadow: var(--box-shadow);
     color: var(--color-white);
-    background-color: #2e3440;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 100vw;
     left: 0;
     transition: left 1s;
 }
 
 @media screen and (min-width: 800px) {
     .menu {
+        border-radius: 0 0 var(--border-radius) 0;
         width: 280px;
     }
 }
@@ -122,14 +137,31 @@ input[type="checkbox"][id^="checkbox"] {
 }
 
 .menu__header {
-    box-shadow: var(--box-shadow);
-    padding: .5rem 0;
+    background-color: var(--color-darkblue);
+    border-top-right-radius: var(--border-radius);
+    padding: .2rem 0;
     text-align: center;
     z-index: 10;
+    width: 200px;
+}
+
+@media screen and (min-width: 800px) {
+    .menu__header {
+        box-shadow: var(--box-shadow);
+        border-radius: 0;
+        padding: .5rem 0;
+        width: 100%;
+    }
 }
 
 .menu__header-title {
-    font-size: 2rem;
+    font-size: 1.6rem;
+}
+
+@media screen and (min-width: 800px) {
+    .menu__header-title {
+        font-size: 2rem;
+    }
 }
 
 .menu__header-description {
@@ -138,15 +170,22 @@ input[type="checkbox"][id^="checkbox"] {
 
 .menu__paths {
     background-color: var(--color-blue);
-    padding-bottom: 1rem;
     transition: transform 1s;
-    height: 400px;
-    overflow: auto;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 1rem;
 }
 
 @media screen and (min-width: 800px) {
     .menu__paths {
+        display: block;
         height: 100%;
+        padding-bottom: 1rem;
+        overflow: hidden;
+        gap: unset;
     }
 }
 
@@ -157,14 +196,18 @@ input[type="checkbox"][id^="checkbox"] {
 }
 
 .pathsgrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    align-items: center;
 }
 
 @media screen and (min-width: 800px) {
     .pathsgrid {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
+        row-gap: 1rem;
+        column-gap: unset;
     }
 }
 
@@ -198,12 +241,18 @@ input[type="checkbox"][id^="checkbox"] {
 :checked + .pathsgrid__label:before {
     content: "✓";
     position: absolute;
-    right: 20px;
+    right: 0;
     color: var(--color-darkerblue);
     width: 16px;
     height: 16px;
     border-radius: 50%;
     background-color: var(--color-white);
+}
+
+@media screen and (min-width: 800px) {
+    :checked + .pathsgrid__label:before {
+        right: 20px;
+    }
 }
 
 :checked + .pathsgrid__label img {
@@ -216,10 +265,17 @@ input[type="checkbox"][id^="checkbox"] {
 }
 
 .update__text {
+    display: block;
     font-size: .7rem;
     background-color: var(--color-darkerblue);
     padding: .2rem .8rem;
     border-radius: var(--border-radius);
+}
+
+@media screen and (min-width: 800px) {
+    .update__text {
+        display: inline;
+    }
 }
 
 .credit {
@@ -227,11 +283,17 @@ input[type="checkbox"][id^="checkbox"] {
     text-align: center;
     margin-top: 1rem;
     opacity: .7;
+    display: none;
+}
+
+@media screen and (min-width: 800px) {
+    .credit {
+        display: initial;
+    }
 }
 
 /* Section: Range Select */
 .rangeselect {
-    box-shadow: var(--box-shadow);
     position: fixed;
     bottom: 0;
     width: 100vw;
@@ -257,6 +319,7 @@ input[type="checkbox"][id^="checkbox"] {
 @media screen and (min-width: 800px) {
     .rangeselect__wrapper {
         border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
         padding: 1rem 3rem;
         height: 60px;
         width: 80%;
@@ -266,14 +329,17 @@ input[type="checkbox"][id^="checkbox"] {
 /* Footer */
 .footer {
     position: fixed;
-    bottom: 65px;
-    right: 0;
+    top: 0;
+    left: 0;
     z-index: 1000;
 }
 
 @media screen and (min-width: 800px) {
     .footer {
+        top: unset;
+        left: unset;
         bottom: 0;
+        right: 0;
     }
 }
 
@@ -281,8 +347,14 @@ input[type="checkbox"][id^="checkbox"] {
     padding: .5rem;
     text-align: right;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: .5rem;
+}
+
+@media screen and (min-width: 800px) {
+    .footer__social {
+        flex-direction: column;
+    }
 }
 
 .footer__social div {
