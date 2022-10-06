@@ -28,18 +28,15 @@ html, body {
 }
 
 h2 {
-    font-size: 1rem;
+    font-size: 1.4rem;
     text-align: center;
     color: var(--color-white-grey);
-    writing-mode: vertical-rl;
 }
 
 @media screen and (min-width: 800px) {
     h2 {
-        font-size: 1.4rem;
         margin-bottom: .5rem;
         margin-top: .5rem;
-        writing-mode: initial;
     }
 }
 
@@ -65,7 +62,7 @@ input[type="checkbox"][id^="checkbox"] {
     z-index: 10000;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 800px){
     .main {
         flex-direction: row;
         top: 3vh;
@@ -75,7 +72,11 @@ input[type="checkbox"][id^="checkbox"] {
     }
 }
 
-.main_button {
+.main__button {
+    margin-bottom: -1px;
+}
+
+.main__button-input {
     border: none;
     background-color: var(--color-darkblue);
     border-radius: var(--border-radius) var(--border-radius) 0 0; 
@@ -84,7 +85,7 @@ input[type="checkbox"][id^="checkbox"] {
     width: 200px;
 }
 @media screen and (min-width: 800px) {
-    .main_button {
+    .main__button-input {
         border-radius: 0 var(--border-radius) var(--border-radius) 0; 
         height: 45px;
         width: 25px;
@@ -92,26 +93,26 @@ input[type="checkbox"][id^="checkbox"] {
     }
 }
 
-.main_button::after {
+.main__button-input::after {
     content: "˅";
 }
 
 @media screen and (min-width: 800px) {
-    .main_button::after {
+    .main__button-input::after {
         content: "<";
     }
 }
 
-.main_button--hidden {
+.main__button-input--hidden {
     left: -280px;
 }
 
-.main_button--hidden::after {
+.main__button-input--hidden::after {
     content: "˄";
 }
 
 @media screen and (min-width: 800px) {
-    .main_button--hidden::after {
+    .main__button-input--hidden::after {
         content: ">";
     }
 }
@@ -192,8 +193,21 @@ input[type="checkbox"][id^="checkbox"] {
         display: block;
         height: 100%;
         padding-bottom: 1rem;
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: auto;
         gap: unset;
+    }
+}
+
+.menu__paths h2 {
+    font-size: 1rem;
+    writing-mode: vertical-rl;
+}
+
+@media screen and (min-width: 800px) {
+    .menu__paths h2 {
+        font-size: 1.4rem;
+        writing-mode: initial;
     }
 }
 
