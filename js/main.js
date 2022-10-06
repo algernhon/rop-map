@@ -10,7 +10,8 @@ const PATH_WEIGHT = 4;
 let map = L.map('map', {
     crs: L.CRS.Simple,
     attributionControl: false,
-    minZoom: 0,
+    zoom: 0,
+    minZoom: -1,
     maxZoom: 4,
     zoomControl: false
 });
@@ -52,7 +53,7 @@ L.Draw.Polyline.prototype._onTouch = L.Util.falseFn; // Fix for touchscreen
 // Set the custom map
 let bounds = [[0,0], [1000,1366]];
 let image = L.imageOverlay('./img/map.webp', bounds).addTo(map);
-map.fitBounds(bounds);
+map.setView([500,683]);
 
 
 /* 
