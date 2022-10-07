@@ -55,6 +55,37 @@ let bounds = [[0,0], [1000,1366]];
 let image = L.imageOverlay('./img/map.webp', bounds).addTo(map);
 map.setView([500,683]);
 
+// Slider configuration
+const slider = document.getElementById('slider');
+
+const listEpisodes = ['Prologue', 'Episode 1', 'Episode 2', 'Episode 3', 'Episode 4', 'Episode 5', 'Episode 6', 'Episode 7', 'Episode 8'];
+noUiSlider.create(slider, {
+    start: [0, 7],
+    connect: true,
+    step: 1,
+    range: {
+        'min': 0,
+        'max': 7
+    },
+    pips: {
+        mode: 'steps',
+        density: 100,
+        filter: (x) => 2,
+        format: {
+            to: function (value) {
+                return listEpisodes[value];
+            },
+            from: function (value) {
+                return Number(value);
+            }
+        }
+    }
+});
+
+slider.noUiSlider.on('update', function (values) {
+    timelineChange([Number(values[0]), Number(values[1])]);
+});
+
 
 /* 
  * Alright, this thing is a real mess, need to be refactored asap
@@ -208,34 +239,3 @@ map.on(L.Draw.Event.CREATED, function (e) {
 
     console.log(output);
  });
-
-
-var slider = document.getElementById('slider');
-
-const listEpisodes = ['Prologue', 'Episode 1', 'Episode 2', 'Episode 3', 'Episode 4', 'Episode 5', 'Episode 6', 'Episode 7', 'Episode 8'];
-noUiSlider.create(slider, {
-    start: [0, 6],
-    connect: true,
-    step: 1,
-    range: {
-        'min': 0,
-        'max': 6
-    },
-    pips: {
-        mode: 'steps',
-        density: 100,
-        filter: (x) => 2,
-        format: {
-            to: function (value) {
-                return listEpisodes[value];
-            },
-            from: function (value) {
-                return Number(value);
-            }
-        }
-    }
-});
-
-slider.noUiSlider.on('update', function (values) {
-    timelineChange([Number(values[0]), Number(values[1])]);
-});

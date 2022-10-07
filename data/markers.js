@@ -59,7 +59,7 @@ const DATA_MARKERS = {
         },
         {
             "title": "Trout Bend",
-            "coordinates": [610.5, 976,5],
+            "coordinates": [609.7, 955.2],
             "type": "area",
             "image": "trout-bend.webp",
             "episodes": ["S01E05"],
@@ -69,7 +69,7 @@ const DATA_MARKERS = {
         },
         {
             "title": "The Braids",
-            "coordinates": [640.2, 1031.3],
+            "coordinates": [639.2, 1008.1],
             "type": "area",
             "image": "the-braids.webp",
             "episodes": ["S01E05"],
@@ -79,11 +79,21 @@ const DATA_MARKERS = {
         },
         {
             "title": "Unknown forest",
-            "coordinates": [648.8, 1062.8],
+            "coordinates": [643.5, 1034],
             "type": "area",
             "image": "unknown-forest.webp",
             "episodes": ["S01E05"],
             "decription": "Unknown forest with a lot of leafless trees.",
+            "readMoreUrl": "",
+            "isConfirmed": false
+        },
+        {
+            "title": "The Grove",
+            "coordinates": [646.2, 1057.9],
+            "type": "area",
+            "image": "the-grove.webp",
+            "episodes": ["S01E07"],
+            "decription": "A beautiful grove full of fruits. This is one of the destinations of the Harfoots during their migration. Part of the fruit trees were damaged during the eruption of the Mount Doom.",
             "readMoreUrl": "",
             "isConfirmed": false
         },
@@ -275,6 +285,16 @@ const DATA_MARKERS = {
             "episodes": ["S01E06"],
             "decription": "<strong>WARNING SPOILER - This zone has not been revealed in the show yet but its name appears on the official map.</strong><br /><br />If you want to know more about this zone, click on \"Read More\"",
             "readMoreUrl": "https://tolkiengateway.net/wiki/Pelargir",
+            "isConfirmed": true
+        },
+        {
+            "title": "Númenor's camp",
+            "coordinates": [532.9, 910.8],
+            "type": "village",
+            "image": "numenor-camp.webp",
+            "episodes": ["S01E07"],
+            "decription": "A camp set up by the Númenor army when they arrived in the middle-earth. It will later shelter the refugees from the southern lands.",
+            "readMoreUrl": "",
             "isConfirmed": true
         }
     ]
