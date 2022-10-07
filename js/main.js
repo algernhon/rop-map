@@ -158,9 +158,12 @@ function setPath(element) {
 */
 function refreshTimelinePaths() {
     Object.keys(LIST_PATHS).forEach(characterName => {
-        LIST_PATHS[characterName].removeFrom(map);
+        if (LIST_PATHS[characterName] != undefined)
+            LIST_PATHS[characterName].removeFrom(map);
+            
         LIST_PATHS[characterName] = L.layerGroup(getPolylinesFromName(characterName)).addTo(map);
     });
+
     LIST_MARKERS.forEach(maker => {
         maker.removeFrom(map);
     });
