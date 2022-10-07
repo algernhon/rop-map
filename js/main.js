@@ -1,5 +1,6 @@
 // Global variables
 const LIST_PATHS = {};
+const LIST_MARKERS = [];
 const CURRENT_CHAR = [];
 const CURRENT_RANGE = [null, null];
 
@@ -90,14 +91,40 @@ slider.noUiSlider.on('update', function (values) {
 /* 
  * Alright, this thing is a real mess, need to be refactored asap
 */
-DATA_MARKERS.markers.forEach(marker => {
-    const confirmed = (marker.isConfirmed) ? ""  : "<div class='tooltip-tag tooltip-tag--unconfirmed'>coordinates not confirmed</div>";
-    const readMore = (marker.readMoreUrl) ? "<div class='tooltip-moreinfo'><a href='" + marker.readMoreUrl + "' target='_blank'>Read more about " + marker.title + "</a></div>"  : "";
-    const type = DATA_MARKERS.types.find(type => type.name === marker.type);
+function setMarker() {
+    DATA_MARKERS.markers.forEach(marker => {
 
-    L.marker(marker.coordinates, {icon: L.icon({iconUrl: 'img/markers/'+ type.icon, iconSize: type.iconSize, iconAnchor: type.iconAnchor, popupAnchor: type.popupAnchor}), maxWidth: '500', title: marker.title}).bindPopup("<div class='tooltip-image-wrapper' style='background: url(\"img/places/min/" + marker.image + "\")'><div class='tooltip-resize'><a role='button' aria-label='Open higher resolution picture' href='img/places/" + marker.image + "' target='_blank'><img width=30 alt='' src='img/markers/expand-arrows-solid.svg' /></a></div></div><div class='tooltip-content'><header class='tooltip-header'><h2>" + marker.title + "</h2><div class='tooltip-tag'>" + marker.type + "</div>" + confirmed + "</header><div>" + marker.decription + "<div class='tooltip-seenin'><strong>Seen in:</strong> "+ marker.episodes + "</div>"+ readMore + "</div></div>").addTo(map);
-        
-});
+        let isMarkerRelevant = marker.episodes.find(elem => elem.episode >= CURRENT_RANGE[0] && elem.episode <= CURRENT_RANGE[1]);
+
+        let isMarkerFromMovie = marker.episodes.find(elem => elem.episode >= 100);
+
+        if (isMarkerRelevant != undefined || isMarkerFromMovie != undefined) 
+        {
+            let confirmed = (marker.isConfirmed) ? ""  : "<div class='tooltip-tag tooltip-tag--unconfirmed'>coordinates not confirmed</div>";
+            let readMore = (marker.readMoreUrl) ? "<div class='tooltip-moreinfo'><a href='" + marker.readMoreUrl + "' target='_blank'>Read more about " + marker.title + "</a></div>"  : "";
+            let type = DATA_MARKERS.types.find(type => type.name === marker.type);
+            let listEpisodes = marker.episodes.map(elem => {
+                return `S0${elem.season}E0${elem.episode}`;
+            }).join(", ");
+
+            LIST_MARKERS.push(L.marker(marker.coordinates, 
+                {icon: L.icon(
+                    {
+                        iconUrl: 'img/markers/'+ type.icon, 
+                        iconSize: type.iconSize, 
+                        iconAnchor: type.iconAnchor, 
+                        popupAnchor: type.popupAnchor
+                    }
+                    ), 
+                    maxWidth: '500', 
+                    title: marker.title
+                })
+                .bindPopup("<div class='tooltip-image-wrapper' style='background: url(\"img/places/min/" + marker.image + "\")'><div class='tooltip-resize'><a role='button' aria-label='Open higher resolution picture' href='img/places/" + marker.image + "' target='_blank'><img width=30 alt='' src='img/markers/expand-arrows-solid.svg' /></a></div></div><div class='tooltip-content'><header class='tooltip-header'><h2>" + marker.title + "</h2><div class='tooltip-tag'>" + marker.type + "</div>" + confirmed + "</header><div>" + marker.decription + "<div class='tooltip-seenin'><strong>Seen in:</strong> "+ listEpisodes + "</div>"+ readMore + "</div></div>")
+                .addTo(map));
+        }
+            
+    });
+}
 
 /*
  * Function that triggers setPath function through an input 
@@ -134,7 +161,11 @@ function refreshTimelinePaths() {
         LIST_PATHS[characterName].removeFrom(map);
         LIST_PATHS[characterName] = L.layerGroup(getPolylinesFromName(characterName)).addTo(map);
     });
-
+    LIST_MARKERS.forEach(maker => {
+        maker.removeFrom(map);
+    });
+    LIST_MAKERS = [];
+    setMarker();
 }
 
 /*
