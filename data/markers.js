@@ -293,7 +293,7 @@ const DATA_MARKERS = {
             "type": "village",
             "image": "numenor-camp.webp",
             "episodes": ["S01E07"],
-            "decription": "A camp set up by the Númenor army when they arrived in the middle-earth. It will later shelter the refugees from the southern lands.",
+            "decription": "A camp set up by the Númenor army when they arrived in the middle-earth. It will later shelter the refugees from the Southlands.",
             "readMoreUrl": "",
             "isConfirmed": true
         }
