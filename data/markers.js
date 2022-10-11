@@ -38,6 +38,246 @@ const DATA_MARKERS = {
     ],
     "markers": [
         {
+            "title": "Hobbiton",
+            "coordinates": [779.6, 625.6],
+            "type": "village",
+            "image": "hobbiton.webp",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "Hobbiton is a Hobbit village in the central regions of the Shire, within the borders of the Westfarthing.",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Hobbiton",
+            "isConfirmed": true
+        },
+        {
+            "title": "Passing of the Evles",
+            "coordinates": [771, 631.8],
+            "type": "event",
+            "image": "passing-elves.webp",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "After leaving Hobbiton, Frodo and Sam meet a group of Elves heading to Valinor.",
+            "readMoreUrl": "",
+            "isConfirmed": true
+        },
+        {
+            "title": "Woody End",
+            "coordinates": [772.8, 642.8],
+            "type": "area",
+            "image": "woody-end.webp",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "Woody End is an upland wooded region of the Eastfarthing of the Shire, lying between the Green Hill Country on the west and the Marish on the east.",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Woody_End",
+            "isConfirmed": true
+        },
+        {
+            "title": "Bree",
+            "coordinates": [781.6, 676.3],
+            "type": "village",
+            "image": "bree.webp",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "Bree is a village of Men and hobbits, located east of the Shire and south of Fornost in Eriador.",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Bree",
+            "isConfirmed": true
+        },
+        {
+            "title": "Midgewater Marshes",
+            "coordinates": [787.7, 690.8],
+            "type": "area",
+            "image": "midgewater.webp",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "Midgewater Marshes, a fly-infested region of marshland in central Eriador, is a fen that lay between the Chetwood to the west and the Weather Hills to the east.",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Midgewater_Marshes",
+            "isConfirmed": true
+        },
+        {
+            "title": "Weathertop watchtower",
+            "coordinates": [786.3, 709.1],
+            "type": "point of interest",
+            "image": "weathertop.webp",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "Weathertop, known in Sindarin as Amon Sûl, is the southernmost top of the Weather Hills. It stood a little away from the others, and its conical top was flattened.",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Weathertop",
+            "isConfirmed": true
+        },
+        {
+            "title": "Chetwood",
+            "coordinates": [786.7, 681.6],
+            "type": "area",
+            "image": "chetwood.webp",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "Chetwood is the broad woodland that lay to the north and east of the Bree-hill, some forty miles east of the Shire.",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Chetwood",
+            "isConfirmed": true
+        },
+        {
+            "title": "Flood of Bruinen",
+            "coordinates": [785.7, 781.5],
+            "type": "event",
+            "image": "bruinen.webp",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "Bruinen or Loudwater was a river in eastern Eriador. Arwen, bearing wounded Frodo on her horse, confronts the Nine Ringwraiths and summons the flood that consumes them.",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Bruinen",
+            "isConfirmed": true
+        },
+        {
+            "title": "Rivendell",
+            "coordinates": [790.6, 788.7],
+            "type": "city",
+            "image": "rivendell.webp",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "Rivendell, or Imladris, is an Elven outpost established by Elrond in the Misty Mountains on the eastern edge of Eriador.",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Rivendell",
+            "isConfirmed": true
+        },
+        {
+            "title": "Blizzard in the Misty Mountains",
+            "coordinates": [749, 795.7],
+            "type": "event",
+            "image": "misty.webp",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "A blizzard summoned by Saruman forces the Fellowship of the Ring to turn back.",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Misty_Mountains",
+            "isConfirmed": true
+        },
+        {
+            "title": "Caras Galadhon",
+            "coordinates": [700.6, 822.2],
+            "type": "city",
+            "image": "caras.webp",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "Caras Galadhon is the city and fortress of the Galadhrim of Lothlórien, built by Celeborn and his wife Galadriel.",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Caras_Galadhon",
+            "isConfirmed": true
+        },
+        {
+            "title": "Argonath",
+            "coordinates": [612.3, 864.7],
+            "type": "point of interest",
+            "image": "argonath.webp",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "The Argonath, also known as the Pillars of the Kings, or the Gate of Kings is a landmark on the northern edge of Gondor.",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Argonath",
+            "isConfirmed": true
+        },
+        {
+            "title": "Falls of Rauros",
+            "coordinates": [596.8, 868.8],
+            "type": "point of interest",
+            "image": "rauros.webp",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "Rauros, the Falls of Rauros or the Rauros-falls, is the great falls of River Anduin beneath Nen Hithoel, where the river falls from Emyn Muil to the wetland of Nindalf.",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Rauros",
+            "isConfirmed": true
+        },
+        {
+            "title": "Emyn Arnen",
+            "coordinates": [603.5, 881],
+            "type": "area",
+            "image": "emyn.webp",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "Emyn Arnen is a series of hills in Ithilien, located south of Osgiliath in Gondor.",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Emyn_Arnen",
+            "isConfirmed": true
+        },
+        {
+            "title": "The Black Gate",
+            "coordinates": [594.3, 927.5],
+            "type": "point of interest",
+            "image": "mordor-gate.webp",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "The Black Gate, built by Sauron, is the main entrance into the land of Mordor.",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Black_Gate",
+            "isConfirmed": true
+        },
+        {
+            "title": "Ithilien Fortress",
+            "coordinates": [560.1, 913.7],
+            "type": "area",
+            "image": "ithilien.webp",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "Ithilien is a region and fiefdom of Gondor bordering Mordor in western Middle-earth. The hobbits are found and taken to Henneth Annûn by the Rangers of Ithilien, under the command of Faramir.",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Ithilien",
+            "isConfirmed": true
+        },
+        {
+            "title": "Osgiliath",
+            "coordinates": [546.1, 911.9],
+            "type": "city",
+            "image": "osgiliath.webp",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "Osgiliath is the old capital city of Gondor. The city straddles the Anduin River at a point approximately half way between the cities of Minas Anor to the south-west and Minas Ithil to the north-east, and north of the nearby Emyn Arnen.",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Osgiliath",
+            "isConfirmed": true
+        },
+        {
+            "title": "Minas Morgul",
+            "coordinates": [546.1, 925.8],
+            "type": "city",
+            "image": "morgul.webp",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "Minas Morgul was the twin city of Minas Tirith before its fall to the forces of Sauron in the Third Age. ",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Minas_Morgul",
+            "isConfirmed": true
+        },
+        {
+            "title": "Tower of Cirith Ungol",
+            "coordinates": [546, 937.5],
+            "type": "point of interest",
+            "image": "captured.webp",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "Cirith Ungol was a pass through the Ephel Dúath that led into Mordor. After fighting the giant spider Shelob, Frodo got captured and taken to the tower of Cirith Ungol.",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Cirith_Ungol",
+            "isConfirmed": true
+        },
+        {
+            "title": "Frodo and Sam escape from orcs",
+            "coordinates": [579, 939.3],
+            "type": "event",
+            "image": "escape.webp",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "After being enrolled in the ranks of the Sauron's army, they manage to escape and resume their journey to the Mount Doom.",
+            "readMoreUrl": "",
+            "isConfirmed": true
+        },
+        {
             "title": "Grey Marshes",
             "coordinates": [599.6, 889.9],
             "type": "area",

@@ -92,20 +92,32 @@ slider.noUiSlider.on('update', function (values) {
  * Alright, this thing is a real mess, need to be refactored asap
 */
 function setMarker() {
-    DATA_MARKERS.markers.forEach(marker => {
+    DATA_MARKERS.markers.forEach((marker) => {
 
-        let isMarkerRelevant = marker.episodes.find(elem => elem.episode >= CURRENT_RANGE[0] && elem.episode <= CURRENT_RANGE[1]);
+        // Will break on season 2, todo
+        let isMarkerRelevant = marker.episodes.find((elem) => elem.episode >= CURRENT_RANGE[0] && elem.episode <= CURRENT_RANGE[1] && elem.season === 1 ) !== undefined ? true : false;
 
-        let isMarkerFromMovie = marker.episodes.find(elem => elem.episode >= 100);
+        if (marker.episodes.find((elem) => elem.season === 100) !== undefined && LIST_PATHS["Frodo and Sam"] !== undefined)
+            isMarkerRelevant = true;
+        if (marker.episodes.find((elem) => elem.season === 101) !== undefined && LIST_PATHS["Bilbo and Thorin"] !== undefined)
+            isMarkerRelevant = true;
 
-        if (isMarkerRelevant != undefined || isMarkerFromMovie != undefined) 
+        if (isMarkerRelevant === true) 
         {
             let confirmed = (marker.isConfirmed) ? ""  : "<div class='tooltip-tag tooltip-tag--unconfirmed'>coordinates not confirmed</div>";
             let readMore = (marker.readMoreUrl) ? "<div class='tooltip-moreinfo'><a href='" + marker.readMoreUrl + "' target='_blank'>Read more about " + marker.title + "</a></div>"  : "";
-            let type = DATA_MARKERS.types.find(type => type.name === marker.type);
-            let listEpisodes = marker.episodes.map(elem => {
-                return `S0${elem.season}E0${elem.episode}`;
-            }).join(", ");
+            let type = DATA_MARKERS.types.find((type) => type.name === marker.type);
+
+            let listEpisodes = marker.episodes.map((elem) => {
+                    switch (elem.season) {
+                        case 100:
+                            return "Lord Of The Rings (Movie)";
+                        case 101:
+                            return "The Hobbit (Movie)";
+                        default:
+                            return `S0${elem.season}E0${elem.episode}`;
+                    }
+                }).join(", ");
 
             LIST_MARKERS.push(L.marker(marker.coordinates, 
                 {icon: L.icon(
@@ -150,6 +162,11 @@ function setPath(element) {
         LIST_PATHS[characterName].removeFrom(map);
         delete LIST_PATHS[characterName];
     }
+    LIST_MARKERS.forEach(maker => {
+        maker.removeFrom(map);
+    });
+    LIST_MAKERS = [];
+    setMarker();
 }
 
 /*
