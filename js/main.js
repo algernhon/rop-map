@@ -61,12 +61,12 @@ const slider = document.getElementById('slider');
 
 const listEpisodes = ['Prologue', 'Episode 1', 'Episode 2', 'Episode 3', 'Episode 4', 'Episode 5', 'Episode 6', 'Episode 7', 'Episode 8'];
 noUiSlider.create(slider, {
-    start: [0, 7],
+    start: [0, 8],
     connect: true,
     step: 1,
     range: {
         'min': 0,
-        'max': 7
+        'max': 8
     },
     pips: {
         mode: 'steps',

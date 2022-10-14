@@ -343,7 +343,8 @@ const DATA_MARKERS = {
             "type": "area",
             "image": "the-grove.webp",
             "episodes": [
-                {"episode": 7, "season": 1}
+                {"episode": 7, "season": 1},
+                {"episode": 8, "season": 1}
             ],
             "decription": "A beautiful grove full of fruits. This is one of the destinations of the Harfoots during their migration. Part of the fruit trees were damaged during the eruption of the Mount Doom.",
             "readMoreUrl": "",
@@ -443,7 +444,8 @@ const DATA_MARKERS = {
             "episodes": [
                 {"episode": 2, "season": 1},
                 {"episode": 3, "season": 1},
-                {"episode": 4, "season": 1}
+                {"episode": 4, "season": 1},
+                {"episode": 8, "season": 1}
             ],
             "decription": "Ost-in-Edhil is the capital city of Eregion, ruled by Celebrimbor.",
             "readMoreUrl": "https://tolkiengateway.net/wiki/Ost-in-Edhil",
@@ -534,6 +536,7 @@ const DATA_MARKERS = {
                 {"episode": 3, "season": 1},
                 {"episode": 4, "season": 1},
                 {"episode": 5, "season": 1},
+                {"episode": 8, "season": 1}
             ],
             "decription": "Armenelos, also known as Armenelos the Golden and City of the Kings, is the capital and eventual largest city of Númenor.",
             "readMoreUrl": "https://tolkiengateway.net/wiki/Armenelos",
@@ -598,7 +601,7 @@ const DATA_MARKERS = {
             "episodes": [
                 {"episode": 7, "season": 1}
             ],
-            "decription": "<strong>WARNING SPOILER - This zone has not been revealed in the show yet but its name appears on the official map and has been mentioned by Bronwyn.</strong><br /><br />If you want to know more about this zone, click on \"Read More\"",
+            "decription": "<strong>This zone has not been revealed in the show yet but its name appears on the official map and it has been mentioned by Bronwyn.</strong><br /><br />If you want to know more about this zone, click on \"Read More\" (may contain spoil)",
             "readMoreUrl": "https://tolkiengateway.net/wiki/Pelargir",
             "isConfirmed": true
         },
@@ -612,6 +615,42 @@ const DATA_MARKERS = {
             ],
             "decription": "A camp set up by the Númenor army when they arrived in the middle-earth. It will later shelter the refugees from the Southlands.",
             "readMoreUrl": "",
+            "isConfirmed": true
+        },
+        {
+            "title": "Eryn Galen",
+            "coordinates": [705.1, 935.5],
+            "type": "area",
+            "image": "eryn-galen.webp",
+            "episodes": [
+                {"episode": 8, "season": 1}
+            ],
+            "decription": "Eryn Galen, or Mirkwood is a great forest in Rhovanion.<br /><br /><strong>Note:</strong> these coordinates are still controversial, they are still being discussed.",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Mirkwood",
+            "isConfirmed": false
+        },
+        {
+            "title": "End of Season 1",
+            "coordinates": [547.5, 935.6],
+            "type": "event",
+            "image": "season1end.webp",
+            "episodes": [
+                {"episode": 8, "season": 1}
+            ],
+            "decription": "Last frame of ROP Season 1. After revealing his identity to Galadriel, \"Hallbrand\" heads for Mordor.",
+            "readMoreUrl": "",
+            "isConfirmed": true
+        },
+        {
+            "title": "The three rings are forged",
+            "coordinates": [707.6, 753.1],
+            "type": "event",
+            "image": "rings.webp",
+            "episodes": [
+                {"episode": 8, "season": 1}
+            ],
+            "decription": "The Three Rings are magical artefacts, three of the Rings of Power. They are forged by Celebrimbor and his smiths with the desire of \"understanding, making, and healing\" and granted the power to preserve all things unstained.",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Three_Rings",
             "isConfirmed": true
         }
     ]
