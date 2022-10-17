@@ -44,6 +44,17 @@ input[type="checkbox"][id^="checkbox"] {
     display: none;
 }
 
+/* For A11Y purpose */
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
 /* Main */
 #map {
     background-color: var(--color-darkerblue);
@@ -279,6 +290,33 @@ input[type="checkbox"][id^="checkbox"] {
 
 :checked + .pathsgrid__label img {
     border: 2px solid var(--color-white);
+}
+
+.legend {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+    .legend {
+        display: initial;
+    }
+}
+
+.legend__path {
+    display: inline-flex;
+    font-size: .7rem;
+}
+
+.legend__path::before {
+    content: "";
+    border-top: 2px solid var(--color-white);
+    margin: 6px 15px;
+    width: 30px;
+}
+
+.legend__path--theory:before {
+    border-top: 2px dotted var(--color-white);
 }
 
 .update {

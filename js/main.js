@@ -212,7 +212,7 @@ function getPolylinesFromName(characterName) {
             {
                 color: characterColor, 
                 weight: PATH_WEIGHT,
-                dashArray: characterPath.isConfirmed ? '0' : '10 10 1 10',
+                dashArray: characterPath.isConfirmed ? '0' : '2 6',
                 opacity: characterPath.isConfirmed ? '1' : '.7'
             });
         layerArray.push(polyLine);

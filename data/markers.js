@@ -479,8 +479,8 @@ const DATA_MARKERS = {
             "isConfirmed": true
         },
         {
-            "title": "Abandoned Fortress",
-            "coordinates": [907.5, 758.5],
+            "title": "Dûrnost",
+            "coordinates": [917.5, 763.5],
             "type": "point of interest",
             "image": "abandoned-fortress.webp",
             "episodes": [
@@ -492,31 +492,31 @@ const DATA_MARKERS = {
         },
         {
             "title": "Galadriel leaves the boat heading to Valinor",
-            "coordinates": [154, 15],
+            "coordinates": [31, 19.5],
             "type": "event",
             "image": "event-boat-galabriel.webp",
             "episodes": [
                 {"episode": 1, "season": 1}
             ],
-            "decription": "Galadriel decides not to join Valinor and wants to continue his quest to find Sauron. She jumps over the ship, finding herself alone in the middle of the Great Sea.",
+            "decription": "Galadriel decides not to join Valinor and wants to continue his quest to find Sauron. She jumps over the ship, finding herself alone in the middle of the Great Sea.<br /><br /><a href=\"https://i.redd.it/m2gcrv8uy1s21.jpg\" target=\"_blank\">Proof of Valinor location</a>",
             "readMoreUrl": "",
             "isConfirmed": true
         },
         {
             "title": "Galadriel is attacked by a sea worm",
-            "coordinates": [127, 46.5],
+            "coordinates": [38.5, 44.6],
             "type": "event",
             "image": "event-sea-worm.webp",
             "episodes": [
-                {"episode": 1, "season": 1}
+                {"episode": 2, "season": 1}
             ],
             "decription": "After being rescued by shipwrecked people on a raft, Galadriel is attacked by a sea worm.",
             "readMoreUrl": "",
-            "isConfirmed": true
+            "isConfirmed": false
         },
         {
             "title": "Galadriel and Halbrand saved by Elendil",
-            "coordinates": [83, 63],
+            "coordinates": [46.1, 96.3],
             "type": "event",
             "image": "event-sea-save.webp",
             "episodes": [
@@ -525,7 +525,7 @@ const DATA_MARKERS = {
             ],
             "decription": "Galadriel and Halbrand are rescued by a Numenor ship led by Elendil. They are escorted to Armenelos, the capital.",
             "readMoreUrl": "",
-            "isConfirmed": true
+            "isConfirmed": false
         },
         {
             "title": "Armenelos",
