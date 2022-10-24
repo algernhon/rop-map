@@ -3,7 +3,6 @@ const LIST_PATHS = {};
 const LIST_MARKERS = [];
 const CURRENT_CHAR = [];
 const CURRENT_RANGE = [null, null];
-
 const PATH_SPEED_ANIMATION = 400;
 const PATH_WEIGHT = 4;
 
@@ -102,10 +101,10 @@ function setMarker() {
         if (marker.episodes.find((elem) => elem.season === 101) !== undefined && LIST_PATHS["Bilbo and Thorin"] !== undefined)
             isMarkerRelevant = true;
 
-        if (isMarkerRelevant === true) 
+        if (isMarkerRelevant) 
         {
-            let confirmed = (marker.isConfirmed) ? ""  : "<div class='tooltip-tag tooltip-tag--unconfirmed'>coordinates not confirmed</div>";
-            let readMore = (marker.readMoreUrl) ? "<div class='tooltip-moreinfo'><a href='" + marker.readMoreUrl + "' target='_blank'>Read more about " + marker.title + "</a></div>"  : "";
+            let confirmed = (marker.isConfirmed) ? ""  : `<div class='tooltip-tag tooltip-tag--unconfirmed'>coordinates not confirmed</div>`;
+            let readMore = (marker.readMoreUrl) ? `<div class='tooltip-moreinfo'><a href='${marker.readMoreUrl}' target='_blank'>Read more about ${marker.title}</a></div>`  : "";
             let type = DATA_MARKERS.types.find((type) => type.name === marker.type);
 
             let listEpisodes = marker.episodes.map((elem) => {
@@ -122,7 +121,7 @@ function setMarker() {
             LIST_MARKERS.push(L.marker(marker.coordinates, 
                 {icon: L.icon(
                     {
-                        iconUrl: 'img/markers/'+ type.icon, 
+                        iconUrl: `img/markers/${type.icon}`, 
                         iconSize: type.iconSize, 
                         iconAnchor: type.iconAnchor, 
                         popupAnchor: type.popupAnchor
@@ -131,10 +130,9 @@ function setMarker() {
                     maxWidth: '500', 
                     title: marker.title
                 })
-                .bindPopup("<div class='tooltip-image-wrapper' style='background: url(\"img/places/min/" + marker.image + "\")'><div class='tooltip-resize'><a role='button' aria-label='Open higher resolution picture' href='img/places/" + marker.image + "' target='_blank'><img width=30 alt='' src='img/markers/expand-arrows-solid.svg' /></a></div></div><div class='tooltip-content'><header class='tooltip-header'><h2>" + marker.title + "</h2><div class='tooltip-tag'>" + marker.type + "</div>" + confirmed + "</header><div>" + marker.decription + "<div class='tooltip-seenin'><strong>Seen in:</strong> "+ listEpisodes + "</div>"+ readMore + "</div></div>")
+                .bindPopup(`<div class='tooltip-image-wrapper' style='background: url(\"img/places/min/${marker.image}")'><div class='tooltip-resize'><a role='button' aria-label='Open higher resolution picture' href='img/places/${marker.image}' target='_blank'><img width=30 alt='' src='img/markers/expand-arrows-solid.svg' /></a></div></div><div class='tooltip-content'><header class='tooltip-header'><h2>${marker.title}</h2><div class='tooltip-tag'>${marker.type}</div>${confirmed}</header><div>${marker.decription}<div class='tooltip-seenin'><strong>Seen in:</strong> ${listEpisodes}</div>${readMore}</div></div>`)
                 .addTo(map));
         }
-            
     });
 }
 
@@ -153,15 +151,16 @@ function togglePathCheckbox(element) {
  * @param element Html checkbox
 */
 function setPath(element) {
-    let characterName = element.name;
+    const characterName = element.name;
 
     if (LIST_PATHS[characterName] === undefined) {
-        LIST_PATHS[characterName] = L.layerGroup(getPolylinesFromName(characterName), { snakingPause: PATH_SPEED_ANIMATION }).addTo(map).snakeIn();
-    } else
-    {
+        LIST_PATHS[characterName] = L.layerGroup(getPolylinesFromName(characterName), { snakingPause: PATH_SPEED_ANIMATION }).addTo(map).snakeIn(); // Set animation
+    } 
+    else {
         LIST_PATHS[characterName].removeFrom(map);
         delete LIST_PATHS[characterName];
     }
+
     LIST_MARKERS.forEach(maker => {
         maker.removeFrom(map);
     });
@@ -224,7 +223,7 @@ function getPolylinesFromName(characterName) {
 /*
  * A11Y Function: Trigger checkbox when using keyboard on focused label
  *
- * @param event of the label                
+ * @param event of the label
 */
 function interactionLabel(event) {
     const checkbox = event.target.control;
@@ -237,7 +236,7 @@ function interactionLabel(event) {
 
 /*
  * Function: Hide or Show the main menu
- *           
+ *
 */
 function hideshow() {
     const button = document.getElementById("main__button-input");
@@ -261,7 +260,7 @@ function hideshow() {
 /*
  *  Function: Setter for episode range
  *
- * @param range Array of 2 ranges                
+ * @param range Array of 2 ranges
 */
 function setCurrentRange(range) {
     if (range != null && range.length === 2) {
@@ -273,7 +272,7 @@ function setCurrentRange(range) {
 /*
  *  Function: Refresh timeline
  *
- * @param range Array of 2 ranges                
+ * @param range Array of 2 ranges
 */
 function timelineChange(range) {
     setCurrentRange(range);
