@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="An interactive map for the Lord Of The Rings : Rings Of Power Amazon TV show. Follow Galadriel's path and the others!" />
+    <meta name="description"
+        content="An interactive map for the Lord Of The Rings : Rings Of Power Amazon TV show. Follow Galadriel's path and the others!" />
     <meta property="og:title" content="Lord of The Rings: Rings of Power - Interactive map" />
     <meta property="og:site_name" content="Rings of Power Interactive map" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rop-map.com" />
     <meta property="og:image" content="https://rop-map.com/img/og-image-social.jpg" />
-    <meta property="og:description" content="An interactive map for the Lord Of The Rings : Rings Of Power Amazon TV show. Follow Galadriel's path and the others!" />
+    <meta property="og:description"
+        content="An interactive map for the Lord Of The Rings : Rings Of Power Amazon TV show. Follow Galadriel's path and the others!" />
     <meta name="twitter:creator" content="@algernhon">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#5e81ac">
     <title>Lord of The Rings: Rings of Power - Interactive map</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/plugins/leaflet.css"/>
-    <link rel="stylesheet" href="css/plugins/coordinates.css"/>
-    <link rel="stylesheet" href="css/plugins/leaflet.draw.css"/>
-    <link rel="stylesheet" href="css/plugins/nouislider.min.css"/>
-    <link rel="stylesheet" href="css/style.css?id=35"/>
+    <link rel="stylesheet" href="css/plugins/leaflet.css" />
+    <link rel="stylesheet" href="css/plugins/coordinates.css" />
+    <link rel="stylesheet" href="css/plugins/leaflet.draw.css" />
+    <link rel="stylesheet" href="css/plugins/nouislider.min.css" />
+    <link rel="stylesheet" href="css/style.css?id=35" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <script defer type="text/javascript" src="data/paths.js?version=35"></script>
     <script defer type="text/javascript" src="data/markers.js?version=35"></script>
     <script defer src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
-        integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
-        crossorigin=""></script>
-    <script defer src="js/plugins/leaflet.draw.js"></script>
-    <script defer src="js/plugins/coordinates.js"></script>
-    <script defer src="js/plugins/snakeanim.js"></script>
-    <script defer src="js/plugins/nouislider.min.js"></script>
-    <script defer src="js/main.js?version=35"></script>
+        integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin=""></script>
+    <script defer type="text/javascript" src="js/plugins/leaflet.draw.js"></script>
+    <script defer type="text/javascript" src="js/plugins/coordinates.js"></script>
+    <script defer type="text/javascript" src="js/plugins/snakeanim.js"></script>
+    <script defer type="text/javascript" src="js/plugins/nouislider.min.js"></script>
+    <script defer type="text/javascript" src="js/main.js?version=35"></script>
 </head>
+
 <body>
     <main role="main" aria-label="Main menu">
         <section>
@@ -49,43 +52,50 @@
                         <h2>Rings Of Power</h2>
                         <div class="pathsgrid">
                             <div class="pathsgrid__card">
-                                <input type="checkbox" name="Arondir" id="checkboxArondir" onchange="setPath(this)"/>
-                                <label class="pathsgrid__label" for="checkboxArondir" tabindex="0" onkeydown="interactionLabel(event)" >
+                                <input type="checkbox" name="Arondir" id="checkboxArondir" onchange="setPath(this)" />
+                                <label class="pathsgrid__label" for="checkboxArondir" tabindex="0"
+                                    onkeydown="interactionLabel(event)">
                                     <img src="img/portraits/arondir.webp" alt="Arondir's Path" />
                                     <p>Arondir</p>
                                 </label>
                             </div>
                             <div class="pathsgrid__card">
                                 <input type="checkbox" name="Elendil" id="checkboxElendil" onchange="setPath(this)" />
-                                <label class="pathsgrid__label" for="checkboxElendil" tabindex="0" onkeydown="interactionLabel(event)">
+                                <label class="pathsgrid__label" for="checkboxElendil" tabindex="0"
+                                    onkeydown="interactionLabel(event)">
                                     <img src="img/portraits/elendil.webp" alt="Elendil's P  ath" />
                                     <p>Elendil</p>
                                 </label>
                             </div>
                             <div class="pathsgrid__card">
                                 <input type="checkbox" name="Elrond" id="checkboxElrond" onchange="setPath(this)" />
-                                <label class="pathsgrid__label" for="checkboxElrond" tabindex="0" onkeydown="interactionLabel(event)">
+                                <label class="pathsgrid__label" for="checkboxElrond" tabindex="0"
+                                    onkeydown="interactionLabel(event)">
                                     <img src="img/portraits/elrond.webp" alt="Elrond's Path" />
                                     <p>Elrond</p>
                                 </label>
                             </div>
                             <div class="pathsgrid__card">
-                                <input type="checkbox" name="Galadriel" id="checkboxGalabriel"  onchange="setPath(this)"/>
-                                <label class="pathsgrid__label" for="checkboxGalabriel" tabindex="0" onkeydown="interactionLabel(event)">
+                                <input type="checkbox" name="Galadriel" id="checkboxGalabriel"
+                                    onchange="setPath(this)" />
+                                <label class="pathsgrid__label" for="checkboxGalabriel" tabindex="0"
+                                    onkeydown="interactionLabel(event)">
                                     <img src="img/portraits/galabriel.webp" alt="Galadriel's Path" />
                                     <p>Galadriel</p>
                                 </label>
                             </div>
                             <div class="pathsgrid__card">
-                                <input type="checkbox" name="Halbrand" id="checkboxHalbrand"  onchange="setPath(this)"/>
-                                <label class="pathsgrid__label" for="checkboxHalbrand" tabindex="0" onkeydown="interactionLabel(event)">
+                                <input type="checkbox" name="Halbrand" id="checkboxHalbrand" onchange="setPath(this)" />
+                                <label class="pathsgrid__label" for="checkboxHalbrand" tabindex="0"
+                                    onkeydown="interactionLabel(event)">
                                     <img src="img/portraits/halbrand.webp" alt="Halbrand's Path" />
                                     <p>Halbrand</p>
                                 </label>
                             </div>
                             <div class="pathsgrid__card">
                                 <input type="checkbox" name="Nori" id="checkboxNori" onchange="setPath(this)" />
-                                <label class="pathsgrid__label" for="checkboxNori" tabindex="0" onkeydown="interactionLabel(event)">
+                                <label class="pathsgrid__label" for="checkboxNori" tabindex="0"
+                                    onkeydown="interactionLabel(event)">
                                     <img src="img/portraits/harfoots.webp" alt="Nori's Path" />
                                     <p>Nori</p>
                                 </label>
@@ -94,15 +104,19 @@
                         <h2>Movies</h2>
                         <div class="pathsgrid">
                             <div class="pathsgrid__card">
-                                <input type="checkbox" name="Frodo and Sam" id="checkboxFrodoSam" onchange="setPath(this)"/>
-                                <label class="pathsgrid__label" for="checkboxFrodoSam" tabindex="0" onkeydown="interactionLabel(event)" >
+                                <input type="checkbox" name="Frodo and Sam" id="checkboxFrodoSam"
+                                    onchange="setPath(this)" />
+                                <label class="pathsgrid__label" for="checkboxFrodoSam" tabindex="0"
+                                    onkeydown="interactionLabel(event)">
                                     <img src="img/portraits/frodosam.webp" alt="Frodo and Sam Path" />
                                     <p>Frodo & Sam</p>
                                 </label>
                             </div>
                             <div class="pathsgrid__card">
-                                <input type="checkbox" name="Bilbo and Thorin" id="checkboxThorin" onchange="setPath(this)"/>
-                                <label class="pathsgrid__label" for="checkboxThorin" tabindex="0" onkeydown="interactionLabel(event)" >
+                                <input type="checkbox" name="Bilbo and Thorin" id="checkboxThorin"
+                                    onchange="setPath(this)" />
+                                <label class="pathsgrid__label" for="checkboxThorin" tabindex="0"
+                                    onkeydown="interactionLabel(event)">
                                     <img src="img/portraits/thorin.webp" alt="Bilbo and Thorin" />
                                     <p>Bilbo & Thorin</p>
                                 </label>
@@ -110,11 +124,13 @@
                         </div>
                         <div class="legend">
                             <h2>Legend</h2>
-                            <div class="legend__path"><span class="visually-hidden">A plain line on the map is a</span><span>Confirmed path</span></div>
-                            <div class="legend__path legend__path--theory"><span class="visually-hidden">A dotted line on the map is a</span>Theory path<span></span></div>
+                            <div class="legend__path"><span class="visually-hidden">A plain line on the map is
+                                    a</span><span>Confirmed path</span></div>
+                            <div class="legend__path legend__path--theory"><span class="visually-hidden">A dotted line
+                                    on the map is a</span>Theory path<span></span></div>
                         </div>
                         <div class="update">
-                            <span class="update__text">Updated: S01E08</span>
+                            <span class="update__text">Season 2: Work In Progress</span>
                         </div>
                         <div class="credit">
                             Fan-made website - Copyrights and trademarks for the pictures are held by Amazon.
@@ -122,7 +138,8 @@
                     </div>
                 </div>
                 <div class="main__button">
-                    <button id="main__button-input" class="main__button-input" type="button" aria-label="Hide or show menu" onclick="hideshow()"></button>
+                    <button id="main__button-input" class="main__button-input" type="button"
+                        aria-label="Hide or show menu" onclick="hideshow()"></button>
                 </div>
             </div>
         </section>
@@ -154,4 +171,5 @@
         </div>
     </footer>
 </body>
+
 </html>
