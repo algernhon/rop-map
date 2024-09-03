@@ -475,7 +475,7 @@ const DATA_MARKERS = {
                 {"episode": 1, "season": 1}
             ],
             "decription": "Forodwaith is the region in the far north of Middle-earth. This is the location where Galadriel leads a small force to look for evidence of Sauron's whereabouts.",
-            "readMoreUrl": "https://lotr.fandom.com/wiki/Khazad-d%C3%BBm",
+            "readMoreUrl": "https://lotr.fandom.com/wiki/Forodwaith",
             "isConfirmed": true
         },
         {
@@ -487,7 +487,7 @@ const DATA_MARKERS = {
                 {"episode": 1, "season": 1}
             ],
             "decription": "Built by Morgoth, this fortress has been abandoned and this now the home of a snow-troll.",
-            "readMoreUrl": "",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/D%C3%BArnost",
             "isConfirmed": true
         },
         {
