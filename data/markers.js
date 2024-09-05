@@ -273,7 +273,7 @@ const DATA_MARKERS = {
             "episodes": [
                 {"episode": 1, "season": 100}
             ],
-            "decription": "After being enrolled in the ranks of the Sauron's army, they manage to escape and resume their journey to the Mount Doom.",
+            "decription": "After being enrolled in the ranks of Sauron's army, they manage to escape and resume their journey to Mount Doom.",
             "readMoreUrl": "",
             "isConfirmed": true
         },
@@ -346,7 +346,7 @@ const DATA_MARKERS = {
                 {"episode": 7, "season": 1},
                 {"episode": 8, "season": 1}
             ],
-            "decription": "A beautiful grove full of fruits. This is one of the destinations of the Harfoots during their migration. Part of the fruit trees were damaged during the eruption of the Mount Doom.",
+            "decription": "A beautiful grove full of fruits. This is one of the destinations of the Harfoots during their migration. Part of the fruit trees were damaged during the eruption of Mount Doom.",
             "readMoreUrl": "",
             "isConfirmed": false
         },
@@ -376,7 +376,7 @@ const DATA_MARKERS = {
                 {"episode": 6, "season": 1},
                 {"episode": 7, "season": 1}
             ],
-            "decription": "Tirharad is a village of Men location in west-central Mordor.",
+            "decription": "Tirharad is a village of Men located in west-central Mordor.",
             "readMoreUrl": "https://lotr.fandom.com/wiki/Tirharad",
             "isConfirmed": true
         },
@@ -416,7 +416,7 @@ const DATA_MARKERS = {
                 {"episode": 3, "season": 1},
                 {"episode": 4, "season": 1}
             ],
-            "decription": "Camp of Orcs where Arondir was prisonnier after his investigation at Hordern. ",
+            "decription": "Camp of Orcs where Arondir was prisoner after his investigation at Hordern.",
             "readMoreUrl": "",
             "isConfirmed": false
         },
@@ -486,7 +486,7 @@ const DATA_MARKERS = {
             "episodes": [
                 {"episode": 1, "season": 1}
             ],
-            "decription": "Built by Morgoth, this fortress has been abandoned and this now the home of a snow-troll.",
+            "decription": "Built by Morgoth, this fortress has been abandoned and is now home of a snow-troll.",
             "readMoreUrl": "https://tolkiengateway.net/wiki/D%C3%BArnost",
             "isConfirmed": true
         },
@@ -498,7 +498,7 @@ const DATA_MARKERS = {
             "episodes": [
                 {"episode": 1, "season": 1}
             ],
-            "decription": "Galadriel decides not to join Valinor and wants to continue his quest to find Sauron. She jumps over the ship, finding herself alone in the middle of the Great Sea.<br /><br /><a href=\"https://i.redd.it/m2gcrv8uy1s21.jpg\" target=\"_blank\">Proof of Valinor location</a>",
+            "decription": "Galadriel decides not to join Valinor and wants to continue her quest to find Sauron. She jumps ship, finding herself alone in the middle of the Great Sea.<br /><br /><a href=\"https://i.redd.it/m2gcrv8uy1s21.jpg\" target=\"_blank\">Proof of Valinor location</a>",
             "readMoreUrl": "",
             "isConfirmed": true
         },
@@ -523,7 +523,7 @@ const DATA_MARKERS = {
                 {"episode": 2, "season": 1},
                 {"episode": 3, "season": 1}
             ],
-            "decription": "Galadriel and Halbrand are rescued by a Numenor ship led by Elendil. They are escorted to Armenelos, the capital.",
+            "decription": "Galadriel and Halbrand are rescued by a Númenoran ship led by Elendil. They are escorted to Armenelos, the capital.",
             "readMoreUrl": "",
             "isConfirmed": false
         },
@@ -601,7 +601,7 @@ const DATA_MARKERS = {
             "episodes": [
                 {"episode": 7, "season": 1}
             ],
-            "decription": "<strong>This zone has not been revealed in the show yet but its name appears on the official map and it has been mentioned by Bronwyn.</strong><br /><br />If you want to know more about this zone, click on \"Read More\" (may contain spoil)",
+            "decription": "<strong>This zone has not been revealed in the show yet but its name appears on the official map and it has been mentioned by Bronwyn.</strong><br /><br />If you want to know more about this zone, click on \"Read More\" (may contain spoilers)",
             "readMoreUrl": "https://tolkiengateway.net/wiki/Pelargir",
             "isConfirmed": true
         },
@@ -613,7 +613,7 @@ const DATA_MARKERS = {
             "episodes": [
                 {"episode": 7, "season": 1}
             ],
-            "decription": "A camp set up by the Númenor army when they arrived in the middle-earth. It will later shelter the refugees from the Southlands.",
+            "decription": "A camp set up by the Númenor army when they arrived in middle-earth. It will later shelter the refugees from the Southlands.",
             "readMoreUrl": "",
             "isConfirmed": true
         },
@@ -637,7 +637,7 @@ const DATA_MARKERS = {
             "episodes": [
                 {"episode": 8, "season": 1}
             ],
-            "decription": "Last frame of ROP Season 1. After revealing his identity to Galadriel, \"Hallbrand\" heads for Mordor.",
+            "decription": "Last frame of ROP Season 1. After revealing his identity to Galadriel, \"Halbrand\" heads for Mordor.",
             "readMoreUrl": "",
             "isConfirmed": true
         },
