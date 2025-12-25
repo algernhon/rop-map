@@ -1,41 +1,4 @@
 const DATA_MARKERS = {
-    "types": [
-        {
-            "name": "area",
-            "icon": "area.webp",
-            "iconSize": [30, 30],
-            "iconAnchor": [15, 15],
-            "popupAnchor": [0, -5]
-        },
-        {
-            "name": "point of interest",
-            "icon": "poi.webp",
-            "iconSize": [30, 30],
-            "iconAnchor": [15, 15],
-            "popupAnchor": [0, -5]
-        },
-        {
-            "name": "village",
-            "icon": "village.webp",
-            "iconSize": [30, 30],
-            "iconAnchor": [15, 15],
-            "popupAnchor": [0, -5]
-        },
-        {
-            "name": "city",
-            "icon": "city.webp",
-            "iconSize": [30, 30],
-            "iconAnchor": [15, 15],
-            "popupAnchor": [0, -5]
-        },
-        {
-            "name": "event",
-            "icon": "event.webp",
-            "iconSize": [30, 30],
-            "iconAnchor": [15, 15],
-            "popupAnchor": [0, -5]
-        }
-    ],
     "markers": [
         {
             "title": "Hobbiton",
@@ -43,14 +6,15 @@ const DATA_MARKERS = {
             "type": "village",
             "image": "hobbiton.webp",
             "episodes": [
-                {"episode": 1, "season": 100}
+                {"episode": 1, "season": 100},
+                {"episode": 1, "season": 104}
             ],
             "decription": "Hobbiton is a Hobbit village in the central regions of the Shire, within the borders of the Westfarthing.",
             "readMoreUrl": "https://tolkiengateway.net/wiki/Hobbiton",
             "isConfirmed": true
         },
         {
-            "title": "Passing of the Evles",
+            "title": "Passing of the Elves",
             "coordinates": [771, 631.8],
             "type": "event",
             "image": "passing-elves.webp",
@@ -79,7 +43,8 @@ const DATA_MARKERS = {
             "type": "village",
             "image": "bree.webp",
             "episodes": [
-                {"episode": 1, "season": 100}
+                {"episode": 1, "season": 100},
+                {"episode": 1, "season": 104}
             ],
             "decription": "Bree is a village of Men and hobbits, located east of the Shire and south of Fornost in Eriador.",
             "readMoreUrl": "https://tolkiengateway.net/wiki/Bree",
@@ -139,7 +104,8 @@ const DATA_MARKERS = {
             "type": "city",
             "image": "rivendell.webp",
             "episodes": [
-                {"episode": 1, "season": 100}
+                {"episode": 1, "season": 100},
+                {"episode": 1, "season": 104}
             ],
             "decription": "Rivendell, or Imladris, is an Elven outpost established by Elrond in the Misty Mountains on the eastern edge of Eriador.",
             "readMoreUrl": "https://tolkiengateway.net/wiki/Rivendell",
@@ -155,6 +121,18 @@ const DATA_MARKERS = {
             ],
             "decription": "A blizzard summoned by Saruman forces the Fellowship of the Ring to turn back.",
             "readMoreUrl": "https://tolkiengateway.net/wiki/Misty_Mountains",
+            "isConfirmed": true
+        },
+                {
+            "title": "The Lonely Mountain",
+            "coordinates": [851.25, 920.75],
+            "type": "area",
+            "image": "",
+            "episodes": [
+                {"episode": 1, "season": 104}
+            ],
+            "decription": "The Lonely Mountain. Erebor",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Lonely_Mountain",
             "isConfirmed": true
         },
         {
@@ -191,6 +169,30 @@ const DATA_MARKERS = {
             ],
             "decription": "Rauros, the Falls of Rauros or the Rauros-falls, is the great falls of River Anduin beneath Nen Hithoel, where the river falls from Emyn Muil to the wetland of Nindalf.",
             "readMoreUrl": "https://tolkiengateway.net/wiki/Rauros",
+            "isConfirmed": true
+        },
+        {
+            "title": "Erech",
+            "coordinates": [564, 799.25],
+            "type": "point of interest",
+            "image": "",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "Paths of the Dead",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Erech",
+            "isConfirmed": true
+        },
+        {
+            "title": "Amon Hen",
+            "coordinates": [597.25, 859.875],
+            "type": "point of interest",
+            "image": "",
+            "episodes": [
+                {"episode": 1, "season": 100}
+            ],
+            "decription": "An ancient watchtower hill with ruins, located by the wooded slopes of Parth Galen. The location Boromir is killed by Lurtz",
+            "readMoreUrl": "https://tolkiengateway.net/wiki/Amon_Hen",
             "isConfirmed": true
         },
         {
@@ -276,6 +278,78 @@ const DATA_MARKERS = {
             "decription": "After being enrolled in the ranks of Sauron's army, they manage to escape and resume their journey to Mount Doom.",
             "readMoreUrl": "",
             "isConfirmed": true
+        },
+        {
+            "title": "ElvenKing's Halls",
+            "coordinates": [834.5, 900.31],
+            "type": "city",
+            "image": "",
+            "episodes": [
+                {"episode": 1, "season": 104}
+            ],
+            "decription": "",
+            "readMoreUrl": "",
+            "isConfirmed": false
+        },
+        {
+            "title": "Dol Guldur",
+            "coordinates": [707.5, 865.75],
+            "type": "city",
+            "image": "",
+            "episodes": [
+                {"episode": 1, "season": 104}
+            ],
+            "decription": "",
+            "readMoreUrl": "",
+            "isConfirmed": false
+        },
+        {
+            "title": "Goblin-town",
+            "coordinates": [807.25, 814.5],
+            "type": "city",
+            "image": "",
+            "episodes": [
+                {"episode": 1, "season": 104}
+            ],
+            "decription": "The Goblin King (AKA The Great Goblin) rules from Goblin-town, a vast network of caves and tunnels deep within the Misty Mountains.",
+            "readMoreUrl": "",
+            "isConfirmed": false
+        },
+        {
+            "title": "Beorn's Home",
+            "coordinates": [809, 840.75],
+            "type": "point of interest",
+            "image": "",
+            "episodes": [
+                {"episode": 1, "season": 104}
+            ],
+            "decription": "Beorn, a powerful skin-changer who can transform into a giant black bear, known for his immense strength, love of animals, and crucial intervention in the Battle of the Five Armies. He's a solitary, gruff figure who lives between the Misty Mountains and Mirkwood",
+            "readMoreUrl": "",
+            "isConfirmed": false
+        },
+        {
+            "title": "The Elf-path",
+            "coordinates": [827.75, 863.25],
+            "type": "event",
+            "image": "",
+            "episodes": [
+                {"episode": 1, "season": 104}
+            ],
+            "decription": "Bilbo Baggins and the Dwarves encounter a large number of giant spiders in the northern section of Mirkwood, after they stray from the narrow Elf-path while trying to cross the forest",
+            "readMoreUrl": "",
+            "isConfirmed": false
+        },
+        {
+            "title": "Lake-Town (Esgaroth)",
+            "coordinates": [834.25, 920.75],
+            "type": "city",
+            "image": "",
+            "episodes": [
+                {"episode": 1, "season": 104}
+            ],
+            "decription": "",
+            "readMoreUrl": "",
+            "isConfirmed": false
         },
         {
             "title": "Grey Marshes",
@@ -430,7 +504,8 @@ const DATA_MARKERS = {
                 {"episode": 2, "season": 1},
                 {"episode": 3, "season": 1},
                 {"episode": 4, "season": 1},
-                {"episode": 5, "season": 1}
+                {"episode": 5, "season": 1},
+                {"episode": 1, "season": 2}
             ],
             "decription": "Mithlond, known also as Grey Havens, is the capital of the high elves, ruled by Gil-galad.",
             "readMoreUrl": "https://tolkiengateway.net/wiki/Grey_Havens",
